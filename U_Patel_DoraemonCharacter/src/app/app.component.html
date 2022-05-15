@@ -1,1 +1,15 @@
-<h1>Hello World</h1>
+
+<nav class="navbar navbar-dark bg-dark">
+	<div class="container-fluid">
+	  <a class="navbar-brand" href="#">Doraemon Characters - {{Author}}</a>
+	</div>
+</nav>
+
+<div class="container my-3">
+	<span [innerHTML]="this.listOfContent.getOutput(0)"></span>
+	<span [innerHTML]="this.listOfContent.getOutput(1)"></span>
+	<span [innerHTML]="this.listOfContent.getOutput(2)"></span>
+	<span [innerHTML]="this.listOfContent.getOutput(3)"></span>
+	<span [innerHTML]="this.listOfContent.getOutput(4)"></span>
+	<span [innerHTML]="this.listOfContent.getOutput(5)"></span>
+</div>

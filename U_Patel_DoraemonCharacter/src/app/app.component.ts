@@ -11,7 +11,7 @@ export class AppComponent {
 
   Author = 'Utkarsh Patel';
 
-  individualContentItem: Content;
+  firstContentItem: Content;
   secondContentItem: Content;
   thirdContentItem: Content;
   fourthContentItem: Content;
@@ -21,16 +21,8 @@ export class AppComponent {
   
   listOfContent: List = new List;
 
-  /* id: number;
-        title: string;
-        body?: string;
-        author: string;
-        imageLink?: string;
-        type: string;
-        hashtags?:string[]; */
-
   constructor() {
-    this.individualContentItem = {
+    this.firstContentItem = {
       id: 0,
       title: 'Doraemon',
       body: '#MS-903 "Doraemon" or simply Doraemon is the main, titular character of all Doraemon media (including, but not limited to the original manga, the anime (1973, 1979, and 2005), video games, and movies).',
@@ -81,7 +73,7 @@ export class AppComponent {
       
     
         // Populate the content to the empyty array.
-        this.listOfContent.addContent(this.individualContentItem);
+        this.listOfContent.addContent(this.firstContentItem);
         this.listOfContent.addContent(this.secondContentItem);
         this.listOfContent.addContent(this.thirdContentItem);
         this.listOfContent.addContent(this.fourthContentItem);

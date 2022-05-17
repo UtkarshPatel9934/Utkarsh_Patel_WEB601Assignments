@@ -44,6 +44,6 @@ export class List {
 
 	htmlErrorMethod(index:number)
 	{
-		return `<div class="alert alert-danger" role="alert">There is no data in sn Array at Index : ${index} that you wants to access</div>`;
+		return `<div class="alert alert-danger" role="alert">There is no data in an Array at Index : ${index} that you wants to access</div>`;
 	}
 }

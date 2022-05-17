@@ -31,10 +31,10 @@ export class List {
 			<div id="card" class="card bg-dark m-4">
 				<img src="${this._contentArray[index].imageLink}" class="card-img-top" alt="...">
 					<div class="card-body">
-						<h1 class="text-danger card-title">${this._contentArray[index].title}</h1>
-						<h3 class="text-info card-text">${this._contentArray[index].author}</h3>
-						<h4 class="text-warning card-text">${this._contentArray[index].type}</h4>
-						<p class="text-success card-text">${this._contentArray[index].body}</p>
+						<h1 class="mb-3 text-danger card-title">Title - <strong><i>${this._contentArray[index].title}</i></strong></h1>
+						<h2 class="mb-3 text-info card-text">Author - <strong><i>${this._contentArray[index].author}</i></strong></h2>
+						<h3 class="mb-3 text-warning card-text">Type - <strong><i>${this._contentArray[index].type}</i></strong></h3>
+						<p class="mb-3 text-success card-text">Body - <strong><i>${this._contentArray[index].body}</i></strong></p>
 					</div>
 			</div>`
 		    }

@@ -1,4 +1,4 @@
-.contentCard{
+:host{
 	display: block;
 	text-align: center;
 	border: 2px solid red;
@@ -6,9 +6,19 @@
 	width: 60vw;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-variant: small-caps;
-	background-color: #166d3b;
-	background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);
-	color: lightgreen;
+	/* /* background-color: #166d3b; */
+	/* background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%); */
+	color: rgb(0, 0, 0);
+
+	/* Odd Even ContentCard Styles */
+	&.even {
+		/* color: grey; */
+		background-color: lightgray;
+	}
+
+	&.odd {
+		background-color: white;
+	}
 }
 
 .content{
@@ -29,11 +39,11 @@
 
 #hastags{
 	font-size: 25px;
-	color: rgb(250, 208, 0);
+	color: rgb(0, 51, 255);
 }
 
 .contentName{
-	color: rgb(250, 208, 0);
+	color: rgb(0, 51, 255);
 }
 
 .vrline{

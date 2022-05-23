@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Content} from '../models/content';
-import {ContentList} from './content-list.component';
+// import {ContentList} from './content-list.component';
 @Component({
   selector: 'app-content-list',
   templateUrl: './content-list.component.html',

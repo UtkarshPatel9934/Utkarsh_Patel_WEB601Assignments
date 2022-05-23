@@ -1,1 +1,4 @@
-<p>content-list works!</p>
+<!-- Using for loop to iterate through the each Doraemon Characters -->
+<div *ngFor="let item of doraemonCharacters;">
+	<app-content-card [charactersContent]="item"></app-content-card>
+</div>

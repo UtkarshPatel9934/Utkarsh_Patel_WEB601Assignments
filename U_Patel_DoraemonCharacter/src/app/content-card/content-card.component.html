@@ -1,4 +1,38 @@
-<h1>{{charactersContent?.title}}</h1>
-<h2>{{charactersContent?.author}}</h2>
-<h3>{{charactersContent?.type}}</h3>
-<p>{{charactersContent?.body}}</p>
+<div class="contentCard">
+
+	<!-- Added a if condition to check if Image will displays or not.... -->
+	<img *ngIf="charactersContent?.imageLink; else elseBlockForImage" [src]="charactersContent?.imageLink" class="contentImg" alt="Character Picture">
+	
+	<!-- If Image is not set this will runs -->
+	<ng-template #elseBlockForImage>
+		<img src="https://t4.ftcdn.net/jpg/04/00/24/31/360_F_400243185_BOxON3h9avMUX10RsDkt3pJ8iQx72kS3.jpg" class="contentImg" alt="Character Picture Not Available">
+	</ng-template>
+	<!-- If Image is not set this will runs -->
+
+
+	<div class="content">
+		<h1 class="contentTitle"><span class="contentName">Title </span> <span class="vrline">&#9213;</span> {{charactersContent?.title}}</h1>
+		<h2 class="contentAuthor"><span class="contentName">Author </span> <span class="vrline">&#9213;</span> {{charactersContent?.author}}</h2>
+		<h3 class="contentType"><span class="contentName">Type </span> <span class="vrline">&#9213;</span> {{charactersContent?.type}}</h3>
+
+
+		<!-- Added a if condition to check if Body Conent will displays or not.... -->
+		<p *ngIf="charactersContent?.body; else elseBlockForBody" class="contentBody"><span class="contentName">&#x2731;</span>  &nbsp; {{charactersContent?.body}}</p>
+
+		<!-- If Image is not set this will runs -->
+		<ng-template #elseBlockForBody>
+			<p class="contentBody"><span class="contentName">&#x2731;</span>  &nbsp; Sorry, no content available for this Character!</p>
+		</ng-template>
+		<!-- If Image is not set this will runs -->
+
+
+		<!-- Added a if condition to check if Hastags will displays or not.... -->
+		<span *ngIf="charactersContent?.hashtags?.length !== 0 && charactersContent?.hashtags; else elseBlockForHashtags"><span id="hastags">&#10522;</span> {{charactersContent?.hashtags?.join(", ")}}</span>
+		
+		<!-- If Image is not set this will runs -->
+		<ng-template #elseBlockForHashtags>
+			<span><span id="hastags">&#10522;</span>Sorry, Hashtags are not available for this Character!</span>
+		</ng-template>
+		<!-- If Image is not set this will runs -->
+	</div>
+</div>

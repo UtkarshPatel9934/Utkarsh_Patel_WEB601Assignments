@@ -17,7 +17,7 @@ export class ContentListComponent implements OnInit {
         author: 'Doraemon Fandom',
         imageLink: 'https://static0.srcdn.com/wordpress/wp-content/uploads/2020/05/Doraemon-Smiling-Fujko-Fujio.jpg',
         type: 'Robot',
-        hashtags: ['Dora Maha Dora']
+        hashtags: ['Dora Maha Dora', 'Raccoon', 'Robot Cat']
       },
       {
         id: 1,
@@ -26,7 +26,7 @@ export class ContentListComponent implements OnInit {
         author: 'Doraemon Fandom',
         imageLink: 'https://wallpaperaccess.com/full/5584404.jpg',
         type: 'Men',
-        hashtags: ['Noby']
+        hashtags: ['Noby','Nobita-san', 'Ojii-chan']
       },
       {
         id: 2,
@@ -35,7 +35,7 @@ export class ContentListComponent implements OnInit {
         author: 'Doraemon Fandom',
         imageLink: 'https://i.pinimg.com/originals/ba/38/ef/ba38efec0069a0c939d8957d8d12eafa.jpg',
         type: 'Women',
-        hashtags: ['Shizu']
+        hashtags: ['Shizu', 'Shizuka-san', 'Sue']
       },
       {
         id: 3,
@@ -44,7 +44,7 @@ export class ContentListComponent implements OnInit {
         author: 'Doraemon Fandom',
         imageLink: 'https://m.media-amazon.com/images/M/MV5BYzZlOWRhMjItNzE2NC00MWU2LTg3OGMtN2YxMzk4M2MyNTYzXkEyXkFqcGdeQXVyNjIzMjgxMDY@._V1_.jpg',
         type: 'Men',
-        hashtags: ['Giyan']
+        hashtags: ['Giyan','Big G', 'Takeshi-kun']
       },
       {
         id: 4,
@@ -53,7 +53,7 @@ export class ContentListComponent implements OnInit {
         author: 'Doraemon Fandom',
         imageLink: 'https://i.pinimg.com/originals/37/2a/7b/372a7b74086e6d196cb96e678e7f7055.jpg',
         type: 'Men',
-        hashtags: ['Sunu']
+        hashtags: ['Suneo-kun', 'Sune', 'Sune-chama']
       }
     ];
   }

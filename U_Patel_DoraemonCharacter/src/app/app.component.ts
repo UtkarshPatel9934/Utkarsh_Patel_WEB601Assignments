@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {Content} from './models/content';
-import {List} from './models/list.model'
+// import {List} from './models/list.model'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -19,7 +19,7 @@ export class AppComponent {
 
 
   
-  listOfContent: List = new List;
+  // listOfContent: List = new List;
 
   constructor() {
     this.firstContentItem = {
@@ -73,11 +73,11 @@ export class AppComponent {
       
     
         // Populate the content to the empyty array.
-        this.listOfContent.addContent(this.firstContentItem);
-        this.listOfContent.addContent(this.secondContentItem);
-        this.listOfContent.addContent(this.thirdContentItem);
-        this.listOfContent.addContent(this.fourthContentItem);
-        this.listOfContent.addContent(this.fifthContentItem);
+        // this.listOfContent.addContent(this.firstContentItem);
+        // this.listOfContent.addContent(this.secondContentItem);
+        // this.listOfContent.addContent(this.thirdContentItem);
+        // this.listOfContent.addContent(this.fourthContentItem);
+        // this.listOfContent.addContent(this.fifthContentItem);
   }
 
 }

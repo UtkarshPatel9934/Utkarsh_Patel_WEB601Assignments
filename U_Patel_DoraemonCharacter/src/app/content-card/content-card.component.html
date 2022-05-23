@@ -1,7 +1,7 @@
 <div class="contentCard">
 
 	<!-- Added a if condition to check if Image will displays or not.... -->
-	<img *ngIf="charactersContent?.imageLink; else elseBlockForImage" [src]="charactersContent?.imageLink" class="contentImg" alt="Character Picture">
+	<img (click)="printDataOnConsole()" *ngIf="charactersContent?.imageLink; else elseBlockForImage" [src]="charactersContent?.imageLink" class="contentImg" alt="Character Picture">
 	
 	<!-- If Image is not set this will runs -->
 	<ng-template #elseBlockForImage>

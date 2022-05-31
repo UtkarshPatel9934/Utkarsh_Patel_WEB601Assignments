@@ -1,7 +1,29 @@
 <!-- Using for loop to iterate through the each Doraemon Characters -->
-<div>
+<!-- <div> -->
 	<!-- <app-content-card [charactersContent]="item" *ngIf="i/2 === 0 ? o : e"></app-content-card> -->
-		<app-content-card  *ngFor="let item of doraemonCharacters; let even = even; let odd = odd" 
-		[class.even]="even" [class.odd]="odd" [charactersContent]="item"></app-content-card>
+		<!-- <app-content-card  *ngFor="let item of doraemonCharacters; let even = even; let odd = odd"  -->
+		<!-- [class.even]="even" [class.odd]="odd" [charactersContent]="item"></app-content-card> -->
+<!-- </div> -->
+
+
+
+<hr>
+<h1>Filterd Content Type: "Men"</h1>
+<div>
+	<app-content-card  *ngFor="let item of doraemonCharacters | filterPipe:'Men'; let even = even; let odd = odd" [class.even]="even" [class.odd]="odd" [charactersContent]="item"></app-content-card>
+</div>
+
+<hr>
+
+<h1>Filterd Content Type: "Women"</h1>
+<div>
+	<app-content-card  *ngFor="let item of doraemonCharacters | filterPipe:'Women'; let even = even; let odd = odd" [class.even]="even" [class.odd]="odd" [charactersContent]="item"></app-content-card>
+</div>
+
+<hr>
+
+<h1>Filterd Content Type: ""</h1>
+<div>
+	<app-content-card  *ngFor="let item of doraemonCharacters | filterPipe:''; let even = even; let odd = odd" [class.even]="even" [class.odd]="odd" [charactersContent]="item"></app-content-card>
 </div>
 

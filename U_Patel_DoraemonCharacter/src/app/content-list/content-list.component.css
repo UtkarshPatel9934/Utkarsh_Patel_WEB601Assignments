@@ -1,0 +1,12 @@
+h1{
+	text-align: center;
+	font-size: 30px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: chartreuse;
+	letter-spacing: 10px;
+}
+
+hr{
+	margin: 10px 0;
+	border: 4px solid black;
+}

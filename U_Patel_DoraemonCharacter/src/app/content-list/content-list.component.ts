@@ -16,7 +16,7 @@ export class ContentListComponent implements OnInit {
         body: '#MS-903 "Doraemon" or simply Doraemon is the main, titular character of all Doraemon media (including, but not limited to the original manga, the anime (1973, 1979, and 2005), video games, and movies).',
         author: 'Doraemon Fandom',
         imageLink: 'https://static0.srcdn.com/wordpress/wp-content/uploads/2020/05/Doraemon-Smiling-Fujko-Fujio.jpg',
-        type: 'Robot',
+        type: '',
         hashtags: ['Dora Maha Dora', 'Raccoon', 'Robot Cat']
       },
       {
@@ -49,11 +49,29 @@ export class ContentListComponent implements OnInit {
       {
         id: 4,
         title: 'Suneo Honekawa',
-        body: 'Suneo Honekawa (骨川スネ夫 Honekawa Suneo) (also known as Sneech in the English episodes) is a spoiled rich kid who likes to show off his cool stuff to his friends to make them jealous. ',
+        body: 'Suneo Honekawa (骨川スネ夫 Honekawa Suneo) (also known as Sneech in the English episodes) is a spoiled rich kid who likes to show off his cool stuff to his friends to make them jealous.',
         author: 'Doraemon Fandom',
         imageLink: 'https://i.pinimg.com/originals/37/2a/7b/372a7b74086e6d196cb96e678e7f7055.jpg',
         type: 'Men',
         hashtags: ['Suneo-kun', 'Sune', 'Sune-chama']
+      },
+      {
+        id: 5,
+        title: 'Dorami',
+        body: 'Dorami (born on December 2, 2114 with the name ドラミ) is the sister of Doraemon. She is yellow and has ears that resemble a large red bow. She happens to be about 2 years younger than Doraemon.',
+        author: 'Doraemon Fandom',
+        imageLink: 'https://bbts1.azureedge.net/images/p/full/2020/08/c6aa14aa-f862-4506-8fc9-5c7bdb3f564c.jpg',
+        type: '',
+        hashtags: ['Mini-Dora SOS']
+      },
+      {
+        id: 6,
+        title: 'Tamako Nobi',
+        body: 'Tamako Nobi (野比玉子) (also known as Tamako Kataoka 片岡玉子) is Nobitas mother. She is very serious about Nobitas test marks, which is always 0. When she finds out where Nobita hides his exam answer sheets, her punishment is yelling, rarely spanking and reducing his pocket money. Nobitas mom is also serious about Nobita doing his homework, which he never does. She also sends him out on shopping errands, but Nobita usually forgets to buy them after he returns home.',
+        author: 'Doraemon Fandom',
+        imageLink: 'https://pbs.twimg.com/media/EzfjwBPWYAIDG76?format=jpg&name=large',
+        type: 'Women',
+        hashtags: ['Tammy Nobi']
       }
     ];
   }

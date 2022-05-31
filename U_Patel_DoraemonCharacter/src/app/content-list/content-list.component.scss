@@ -29,3 +29,21 @@ hr{
 		background-color: #FCF6F5;
 	}
 }
+
+input{
+	width: 60%;
+	margin: 0 auto;
+	background-color: #295F2E;
+	color: #F9D142;
+	padding: 10px 0;
+}
+input::placeholder{
+	color: #F9D142;
+}
+
+.getUserInputBtn{
+	color: #F9D142;
+	background-color: #295F2E;
+	padding: 10px;
+	border: 0;
+}

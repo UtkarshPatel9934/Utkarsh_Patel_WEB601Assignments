@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Content} from '../models/content';
+
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 // import {ContentList} from './content-list.component';
 @Component({
   selector: 'app-content-list',
@@ -77,7 +80,30 @@ export class ContentListComponent implements OnInit {
   }
 
 
+  
+  displayValue = '';
+  getValue(input:string)
+  {
+    let inputBox = (<HTMLInputElement>document.querySelector('input'));
+    this.doraemonCharacters.forEach(e => {
+      if(e.author === input)
+      {
+        this.displayValue = `Content item exists with the Author ${input}`
+        inputBox.style.color = "blue";
+        return  this.displayValue;
+        
+      }
+      else
+      {
+        this.displayValue = `Content item doesn't exists with the Author ${input}`;
+        inputBox.style.color = "gray";
+        return  this.displayValue;
+      }
+    })
+  }
+
   ngOnInit(): void {
+   
   }
 
 }

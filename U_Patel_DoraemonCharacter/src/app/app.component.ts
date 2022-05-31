@@ -1,6 +1,10 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
 import {Content} from './models/content';
 // import {List} from './models/list.model'
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

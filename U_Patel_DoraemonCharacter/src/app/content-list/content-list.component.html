@@ -5,6 +5,12 @@
 		<!-- [class.even]="even" [class.odd]="odd" [charactersContent]="item"></app-content-card> -->
 <!-- </div> -->
 
+<div>
+	<!-- <label for="text" ></label> &nbsp; -->
+	<input id="inputBox" #getUserInput placeholder="Enter the Author Name" #getInputFromUser id="text" type="text" value="{{displayValue}}"> &nbsp;
+	<button class="getUserInputBtn" type="button" (click)="getValue(getUserInput.value)">{{displayValue ? displayValue : 'Get Information'}}</button>
+</div>
+
 
 
 <hr>

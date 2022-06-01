@@ -5,14 +5,21 @@
 		<!-- [class.even]="even" [class.odd]="odd" [charactersContent]="item"></app-content-card> -->
 <!-- </div> -->
 
-<div>
-	<!-- <label for="text" ></label> &nbsp; -->
-	<input id="inputBox" #getUserInput placeholder="Enter the Author Name" #getInputFromUser id="text" type="text" value="{{displayValue}}"> &nbsp;
-	<button class="getUserInputBtn" type="button" (click)="getValue(getUserInput.value)">{{displayValue ? displayValue : 'Get Information'}}</button>
+
+<div id="shortNote">
+	{{disabledMsg}}
 </div>
 
+<div>
+	<input id="inputBox" #getUserInput placeholder="Please Type EXACT Author Name here..." #getInputFromUser id="text" type="text" value="{{displayValue}}" (keyup)="unBlockBtn()"> &nbsp;
+	<button disabled="disabled" class="getUserInputBtn" type="button" (click)="getValue(getUserInput.value); getDisabledMessage(); foundMsg();provideInputValueToPipe(getUserInput.value)">{{displayValue ? displayValue : 'Get Information'}}</button>
+</div>
 
-
+<div>
+		<h2>{{foundContentMsg}}</h2>
+		<!-- <h1>Below is Content with same Author, which you are looking for:</h1> -->
+		<app-content-card class="applyThickBorder" *ngFor="let item of doraemonCharacters | applyBorderPipe:valueToPipe;" [charactersContent]="item"></app-content-card>
+</div>
 <hr>
 <h1>Filterd Content Type: "Men"</h1>
 <div>

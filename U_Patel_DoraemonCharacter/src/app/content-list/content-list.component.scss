@@ -1,21 +1,37 @@
-h1{
-	margin-top: 40px;
-	text-align: center;
-	font-size: 30px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	color: #F9D142;
-	letter-spacing: 10px;
-	background-color: #292826;
-	padding: 10px 0;
-}
-
-hr{
-	margin: 10px 0;
-	border: 4px solid #295F2E;
-}
 
 
 :host{
+	#shortNote{
+		padding: 10px;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		color: red;
+		font-size: 25px;
+	}
+	h1{
+		margin-top: 40px;
+		text-align: center;
+		font-size: 30px;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		color: #F9D142;
+		letter-spacing: 10px;
+		background-color: #292826;
+		padding: 10px 0;
+	}
+	h2{
+		margin-top: 40px;
+		text-align: center;
+		font-size: 30px;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		color: #F9D142;
+		letter-spacing: 10px;
+		background-color: #292826;
+		// padding: 10px 0;
+	}
+	
+	hr{
+		margin: 10px 0;
+		border: 4px solid #295F2E;
+	}
 	.menCards{
 		color: #0063B2;
 		background-color: #9CC3D5;
@@ -28,22 +44,31 @@ hr{
 		color: #2BAE66;
 		background-color: #FCF6F5;
 	}
-}
+	
+	input{
+		background-color: beige;
+		border: 1px solid red;
+		width: 30%;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+	}
+	input::placeholder{
+		color: #ff0000;
+	}
+	
+	.getUserInputBtn{
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+	}
 
-input{
-	width: 60%;
-	margin: 0 auto;
-	background-color: #295F2E;
-	color: #F9D142;
-	padding: 10px 0;
-}
-input::placeholder{
-	color: #F9D142;
-}
 
-.getUserInputBtn{
-	color: #F9D142;
-	background-color: #295F2E;
-	padding: 10px;
-	border: 0;
+	.applyThickBorder{
+		border: 15px solid rgb(17, 255, 0);
+	}
 }

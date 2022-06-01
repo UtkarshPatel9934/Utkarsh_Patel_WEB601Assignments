@@ -79,29 +79,64 @@ export class ContentListComponent implements OnInit {
     ];
   }
 
-
   
   displayValue = '';
   getValue(input:string)
   {
     let inputBox = (<HTMLInputElement>document.querySelector('input'));
+    let buttonSelector = (<HTMLButtonElement>document.querySelector('button'));
     this.doraemonCharacters.forEach(e => {
       if(e.author === input)
       {
-        this.displayValue = `Content item exists with the Author ${input}`
+        this.displayValue = `Content item exists with the Author Name: "${input}"`
         inputBox.style.color = "blue";
-        return  this.displayValue;
-        
+        buttonSelector.style.color = "blue";
+        buttonSelector.disabled = true;
+        return this.displayValue;
       }
       else
       {
-        this.displayValue = `Content item doesn't exists with the Author ${input}`;
+        this.displayValue = `Content item doesn't exists with the Author Name: "${input}"`
         inputBox.style.color = "gray";
-        return  this.displayValue;
+        inputBox.style.color = "gray";
+        buttonSelector.disabled = true;
+        return this.displayValue;
       }
     })
   }
 
+  disabledMsg = ""
+  getDisabledMessage()
+        {
+          this.disabledMsg = `Note: Try to reload a page after clicking the Button one time!
+          it's automatically Disabled on just 1st Click!`
+          return this.disabledMsg;
+        };
+
+  unBlockBtn()
+        {
+          let buttonSelector = (<HTMLButtonElement>document.querySelector('button'));
+          buttonSelector.disabled = false;
+        }
+
+
+        valueToPipe = '';
+  provideInputValueToPipe(input:string):string
+  {
+    this.valueToPipe = input
+      return this.valueToPipe;
+  }
+
+
+  foundContentMsg = ""
+  foundMsg()
+  {
+    this.foundContentMsg = `Below is Content with same Author, which you are looking for:`
+    return this.foundContentMsg;
+  }
+
+  
+  
   ngOnInit(): void {
    
   }

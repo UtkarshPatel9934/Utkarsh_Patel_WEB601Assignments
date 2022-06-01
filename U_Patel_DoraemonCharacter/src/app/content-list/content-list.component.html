@@ -17,7 +17,6 @@
 
 <div>
 		<h2>{{foundContentMsg}}</h2>
-		<!-- <h1>Below is Content with same Author, which you are looking for:</h1> -->
 		<app-content-card class="applyThickBorder" *ngFor="let item of doraemonCharacters | applyBorderPipe:valueToPipe;" [charactersContent]="item"></app-content-card>
 </div>
 <hr>

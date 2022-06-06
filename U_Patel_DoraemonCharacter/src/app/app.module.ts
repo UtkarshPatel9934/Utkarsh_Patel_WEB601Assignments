@@ -7,6 +7,7 @@ import { ContentListComponent } from './content-list/content-list.component';
 import { ContentCardComponent } from './content-card/content-card.component';
 import { FilterPipePipe } from './pipes/filter-pipe.pipe';
 import { ApplyBorderPipePipe } from './pipes/apply-border-pipe.pipe';
+import { HighlightImportantDataDirective } from './directive/highlight-important-data.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ApplyBorderPipePipe } from './pipes/apply-border-pipe.pipe';
     ContentListComponent,
     ContentCardComponent,
     FilterPipePipe,
-    ApplyBorderPipePipe
+    ApplyBorderPipePipe,
+    HighlightImportantDataDirective,
   ],
   imports: [
     BrowserModule,

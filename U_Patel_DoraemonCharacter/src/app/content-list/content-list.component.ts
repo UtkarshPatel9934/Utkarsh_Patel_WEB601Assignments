@@ -27,7 +27,8 @@ export class ContentListComponent implements OnInit {
         title: 'Nobita',
         body: 'Nobita Nobi (野比 のび太 Nobi Nobita), known simply as Noby in the English dub, is the protagonist of the Doraemon series. His birthday is on 7th August (Leo).',
         author: 'Doraemon Fandom',
-        imageLink: 'https://wallpaperaccess.com/full/5584404.jpg',
+        // imageLink: 'https://wallpaperaccess.com/full/5584404.jpg',
+        imageLink: '',
         type: 'Men',
         hashtags: ['Noby','Nobita-san', 'Ojii-chan']
       },

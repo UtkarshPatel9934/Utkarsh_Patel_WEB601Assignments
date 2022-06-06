@@ -5,28 +5,46 @@ import { Directive, ElementRef,HostBinding, HostListener, Input } from '@angular
 })
 export class HighlightImportantDataDirective {
 
-  // @Input() colour?: string;
-  private checkIsHighlighted: boolean = false;
-  // private grabTypeEle;
+  // for the title 
+  @Input() colour?: string;
 
+
+  private checkIsHighlighted: boolean = false;
+  private checkIsClicked: boolean = false;
+
+  // for the type 
   @HostBinding('style.border')
   get applyBorderColor()
   {
     // return this.checkIsHighlighted ? "2px solid red" : "2px solid green";
     return this.checkIsHighlighted ? "2px solid gold" : "none";
   }
+ 
+  // for the title 
+  @HostBinding('style.backgroundColor')
+  get applyBackgroundColor()
+  {
+    // return this.checkIsHighlighted ? "2px solid red" : "2px solid green";
+    return this.checkIsClicked ? this.colour : "transparent";
+  }
 
 
   constructor(private grabElm: ElementRef) {
-    this.grabElm.nativeElement.style.border;
+    this.grabElm.nativeElement;
   }
 
 
 
+  // for the type
   @HostListener('mouseover') onEnterInTypeTag() {
     this.checkIsHighlighted = !this.checkIsHighlighted;
   }
 
+  // for the type
+  @HostListener('click') changeBackgroundOfTitle() {
+    this.checkIsClicked = !this.checkIsClicked;
+  }
+  
 
 
 }

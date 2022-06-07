@@ -14,7 +14,7 @@
 	<div class="content">
 		<h1 appHighlightImportantData [colour]="'red'" class="contentTitle"><span class="contentName">Title </span> <span class="vrline">&#9213;</span> {{charactersContent?.title}}</h1>
 		<h2 class="contentAuthor"><span class="contentName">Author </span> <span class="vrline">&#9213;</span> {{charactersContent?.author}}</h2>
-		<h3 appHighlightImportantData class="contentType"><span class="contentName">Type </span> <span class="vrline">&#9213;</span> {{charactersContent?.type}}</h3>
+		<h3 appHighlightImportantData [applyBorderToOnlyType]="true" class="contentType"><span class="contentName">Type </span> <span class="vrline">&#9213;</span> {{charactersContent?.type}}</h3>
 
 
 		<!-- Added a if condition to check if Body Conent will displays or not.... -->

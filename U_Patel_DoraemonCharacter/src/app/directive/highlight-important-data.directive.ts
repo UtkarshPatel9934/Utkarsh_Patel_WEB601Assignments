@@ -7,6 +7,7 @@ export class HighlightImportantDataDirective {
 
   // for the title 
   @Input() colour?: string;
+  @Input() applyBorderToOnlyType?: boolean = false;
 
 
   private checkIsHighlighted: boolean = false;
@@ -17,7 +18,7 @@ export class HighlightImportantDataDirective {
   get applyBorderColor()
   {
     // return this.checkIsHighlighted ? "2px solid red" : "2px solid green";
-    return this.checkIsHighlighted ? "2px solid gold" : "none";
+    return (this.checkIsHighlighted && this.applyBorderToOnlyType) ? "2px solid gold" : "none";
   }
  
   // for the title 

@@ -17,7 +17,7 @@ export class ContentListComponent implements OnInit {
         id: 0,
         title: 'Doraemon',
         body: '#MS-903 "Doraemon" or simply Doraemon is the main, titular character of all Doraemon media (including, but not limited to the original manga, the anime (1973, 1979, and 2005), video games, and movies).',
-        author: 'Doraemon Fandom',
+        author: 'Doraemon',
         imageLink: 'https://static0.srcdn.com/wordpress/wp-content/uploads/2020/05/Doraemon-Smiling-Fujko-Fujio.jpg',
         type: '',
         hashtags: ['Dora Maha Dora', 'Raccoon', 'Robot Cat']
@@ -72,7 +72,7 @@ export class ContentListComponent implements OnInit {
         id: 6,
         title: 'Tamako Nobi',
         body: 'Tamako Nobi (野比玉子) (also known as Tamako Kataoka 片岡玉子) is Nobitas mother. She is very serious about Nobitas test marks, which is always 0. When she finds out where Nobita hides his exam answer sheets, her punishment is yelling, rarely spanking and reducing his pocket money. Nobitas mom is also serious about Nobita doing his homework, which he never does. She also sends him out on shopping errands, but Nobita usually forgets to buy them after he returns home.',
-        author: 'Doraemon Fandom',
+        author: 'Utkarsh',
         imageLink: 'https://pbs.twimg.com/media/EzfjwBPWYAIDG76?format=jpg&name=large',
         type: 'Women',
         hashtags: ['Tammy Nobi']
@@ -82,28 +82,29 @@ export class ContentListComponent implements OnInit {
 
   
   displayValue = '';
-  getValue(input:string)
+  getValue(input:string):any
   {
     let inputBox = (<HTMLInputElement>document.querySelector('input'));
     let buttonSelector = (<HTMLButtonElement>document.querySelector('button'));
-    this.doraemonCharacters.forEach(e => {
-      if(e.author === input)
+
+    for (let index = 0; index < this.doraemonCharacters.length; index++) {
+      if(this.doraemonCharacters[index].author === input)
       {
-        this.displayValue = `Content item exists with the Author Name: "${input}"`
         inputBox.style.color = "blue";
         buttonSelector.style.color = "blue";
         buttonSelector.disabled = true;
-        return this.displayValue;
+        this.displayValue = `Content item exists with the Author Name: "${input}"`;
       }
-      else
+      if(this.displayValue === '')
       {
-        this.displayValue = `Content item doesn't exists with the Author Name: "${input}"`
+        this.displayValue = "";
         inputBox.style.color = "gray";
         inputBox.style.color = "gray";
         buttonSelector.disabled = true;
-        return this.displayValue;
-      }
-    })
+        this.displayValue = `Content item doesn't exists with the Author Name: "${input}"`;
+      } 
+    }
+    
   }
 
   disabledMsg = ""

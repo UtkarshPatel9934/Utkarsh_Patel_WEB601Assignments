@@ -12,7 +12,7 @@
 
 
 	<div class="content">
-		<h1 appHighlightImportantData [colour]="'red'" class="contentTitle"><span class="contentName">Title </span> <span class="vrline">&#9213;</span> {{charactersContent?.title}}</h1>
+		<h1 class="contentTitle" appHighlightImportantData [colour]="'yellow'"><span class="contentName">Title </span> <span class="vrline">&#9213;</span> {{charactersContent?.title}}</h1>
 		<h2 class="contentAuthor"><span class="contentName">Author </span> <span class="vrline">&#9213;</span> {{charactersContent?.author}}</h2>
 		<h3 appHighlightImportantData [applyBorderToOnlyType]="true" class="contentType"><span class="contentName">Type </span> <span class="vrline">&#9213;</span> {{charactersContent?.type}}</h3>
 
@@ -28,7 +28,13 @@
 
 
 		<!-- Added a if condition to check if Hastags will displays or not.... -->
-		<span appHighlightImportantData *ngIf="charactersContent?.hashtags?.length !== 0 && charactersContent?.hashtags;  else elseBlockForHashtags"><span id="hastags">&#10522;</span> {{charactersContent?.hashtags?.join(", ")}}</span>
+		<span *ngIf="charactersContent?.hashtags?.length !== 0 && charactersContent?.hashtags;  else elseBlockForHashtags">
+			<div appHighlightImportantData [applyColorToHashtags]="true" *ngFor="let Hashtags of charactersContent?.hashtags">
+				<span id="hastags">&#10522;</span> {{Hashtags}}
+			</div>
+		 <!-- {{charactersContent?.hashtags?.join(", ")}} -->
+		 
+		</span>
 		
 		<!-- If Image is not set this will runs -->
 		<ng-template #elseBlockForHashtags>

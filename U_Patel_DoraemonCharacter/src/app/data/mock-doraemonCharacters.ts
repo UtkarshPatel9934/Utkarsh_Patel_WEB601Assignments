@@ -1,7 +1,7 @@
 import {Content} from '../models/content';
 
 
-export const doraemonCharacters: Content[] = [{
+export const DORAEMONCHARACTERS: Content[] = [{
         id: 0,
         title: 'Doraemon',
         body: '#MS-903 "Doraemon" or simply Doraemon is the main, titular character of all Doraemon media (including, but not limited to the original manga, the anime (1973, 1979, and 2005), video games, and movies).',

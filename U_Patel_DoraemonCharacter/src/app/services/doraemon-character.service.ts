@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Content} from '../models/content';
 import { DORAEMONCHARACTERS } from '../data/mock-doraemonCharacters';
-import { findIndex, Observable, of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -113,16 +113,19 @@ export class DoraemonCharacterService {
   deleteDoraemonCharacters(getInputedNumberbyUser: number): Observable<Content[]>{
 
     let index = 1;
-    let saveDeletedArray:Array<Content>;
+    var save:any;
     DORAEMONCHARACTERS.forEach(findIndex => {
       if(findIndex.id === getInputedNumberbyUser)
       {   
         // saveDeletedArray.push(this.getDoraemonCharactersFromInput(getInputedNumberbyUser));
-        DORAEMONCHARACTERS.splice(getInputedNumberbyUser , index);
-        console.log(saveDeletedArray);
+        save = DORAEMONCHARACTERS.splice(getInputedNumberbyUser , index);
+        alert(`Deleted doraemon Character from Array is : 
+
+        ${JSON.stringify(save)}
+        `);
       }   
     })
-    return of (DORAEMONCHARACTERS);
+    return save;
   }
   
 

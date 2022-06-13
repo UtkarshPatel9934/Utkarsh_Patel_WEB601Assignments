@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 import {Content} from '../models/content';
 import { DORAEMONCHARACTERS } from '../data/mock-doraemonCharacters';
 import { DoraemonCharacterService } from '../services/doraemon-character.service';
@@ -119,12 +119,9 @@ export class ContentListComponent implements OnInit {
 
     this.contentService.addDoraemonCharacters(this.setDoraemonCharacter);
 
-
-
     this.contentService.updateDoraemonCharactersContent(this.updateDoraemonCharacter);
 
-
-    this.contentService.deleteDoraemonCharacters(0);
+    this.contentService.deleteDoraemonCharacters(3);
 };
 
 }

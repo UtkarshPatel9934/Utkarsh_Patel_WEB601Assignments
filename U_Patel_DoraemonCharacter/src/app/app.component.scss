@@ -1,6 +1,5 @@
 :host{
 	
-
 	/* Odd Even ContentCard Styles */
 	&.even {
 		/* color: grey; */
@@ -12,6 +11,8 @@
 	}
 }
 .singleCard{
+	-webkit-box-shadow: 0 0 30px rgb(0, 0, 0);
+	box-shadow: 0 0 30px rgb(0, 0, 0);
 	display: block;
 	text-align: center;
 	border: 2px solid red;

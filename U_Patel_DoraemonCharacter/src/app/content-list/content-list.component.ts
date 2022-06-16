@@ -109,11 +109,11 @@ export class ContentListComponent implements OnInit {
 
 
   // get the doraemon characters based on the input 
-    /* this.contentService.getDoraemonCharactersFromInput(6).subscribe(fetchedContent => {
+    this.contentService.getDoraemonCharactersFromInput(6).subscribe(fetchedContent => {
       alert(`the content you want to fetch is :
 
       ${JSON.stringify(fetchedContent)}`);
-    }); */
+    });
     
 
 

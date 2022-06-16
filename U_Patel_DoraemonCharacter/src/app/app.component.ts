@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
 
 
   ngOnInit(): void {
-   this.contentService.getDoraemonCharactersFromInput(0).subscribe((contentArrayFromService: Content[]) => {
+   this.contentService.getDoraemonCharactersFromInput(5).subscribe((contentArrayFromService: Content[]) => {
       this.singleContent = contentArrayFromService;
     })
   }

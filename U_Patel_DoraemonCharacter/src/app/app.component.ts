@@ -1,11 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
-import {Content} from './models/content';
-import { OnInit, Injectable } from '@angular/core';
-import { DORAEMONCHARACTERS } from './data/mock-doraemonCharacters';
-import { DoraemonCharacterService } from './services/doraemon-character.service';
+import { OnInit } from '@angular/core';
+
 
 
 // import {List} from './models/list.model'
@@ -20,19 +15,17 @@ export class AppComponent implements OnInit {
 
   Author = 'Utkarsh Patel';
 
-  singleContent: Content[];
+
   
  
 
-  constructor(private contentService : DoraemonCharacterService) {
-    this.singleContent = [];
+  constructor() {
+
   }
 
 
 
   ngOnInit(): void {
-   this.contentService.getDoraemonCharactersFromInput(5).subscribe((contentArrayFromService: Content[]) => {
-      this.singleContent = contentArrayFromService;
-    })
+   
   }
 }

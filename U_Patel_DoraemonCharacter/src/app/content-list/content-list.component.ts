@@ -1,9 +1,6 @@
-import { Component, OnInit, Injectable } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {Content} from '../models/content';
-import { DORAEMONCHARACTERS } from '../data/mock-doraemonCharacters';
 import { DoraemonCharacterService } from '../services/doraemon-character.service';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 // import {ContentList} from './content-list.component';
 @Component({
   selector: 'app-content-list',

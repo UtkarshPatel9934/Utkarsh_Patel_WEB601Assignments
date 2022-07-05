@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Content} from '../models/content';
-import { DORAEMONCHARACTERS } from '../data/mock-doraemonCharacters';
+import { DEFAULTCHARACTERCONTENT, DORAEMONCHARACTERS } from '../data/mock-doraemonCharacters';
 import { Observable, of } from 'rxjs';
 
 @Injectable({
@@ -22,6 +22,17 @@ export class DoraemonCharacterService {
     return of (DORAEMONCHARACTERS.filter(dorarmonCharcter => {
       return  getInputedNumberbyUser === dorarmonCharcter.id;
     }));
+  }
+
+
+  getDoraemonCharacterDetails(getInputedNumberbyUser: number): Observable<Content> {
+    for (var i = 0; i < DORAEMONCHARACTERS.length; i++) // iterate through each chess champion
+    {
+      if (DORAEMONCHARACTERS[i].id === getInputedNumberbyUser) { // found the item
+        return of(DORAEMONCHARACTERS[i]);
+      }
+    }
+    return of(DEFAULTCHARACTERCONTENT); // need to return something if the content isn't there
   }
 
 

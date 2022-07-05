@@ -1,6 +1,13 @@
 import {Content} from '../models/content';
 
 
+export const DEFAULTCHARACTERCONTENT: Content = {
+  id: -1,
+  title: 'NOT FOUND',
+  author: "NOT VALID",
+  type: 'NOT AVAILABLE'
+}
+
 export const DORAEMONCHARACTERS: Content[] = [{
         id: 0,
         title: 'Doraemon',

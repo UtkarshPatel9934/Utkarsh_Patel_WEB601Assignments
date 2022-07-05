@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 // added the import statement for the Content Detail Component
 import { ContentDetailComponent } from './content-detail/content-detail.component';
 import { ContentListComponent } from './content-list/content-list.component';
+import { ContentSearchComponent } from './content-search/content-search.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: "detail/:id",
     component: ContentDetailComponent
+  },
+  {
+    path: "search",
+    component: ContentSearchComponent
   },
 ];
 

@@ -12,6 +12,7 @@ import { HighlightImportantDataDirective } from './directive/highlight-important
 // importing the app-router.module file
 import { AppRoutingModule } from './app-routing.module';
 import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { ContentSearchComponent } from './content-search/content-search.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +22,7 @@ import { ContentDetailComponent } from './content-detail/content-detail.componen
     ApplyBorderPipePipe,
     HighlightImportantDataDirective,
     ContentDetailComponent,
+    ContentSearchComponent,
   ],
   imports: [
     BrowserModule,

@@ -27,16 +27,16 @@ export class DoraemonCharacterService {
 
   // A method that accepts a Content item as an input, adds the item to the array, and returns the array after the item is added
   addDoraemonCharacters(getInputedContentbyUser:Content): Observable<Content[]>{
-    alert(`the content you recently added is :
+    // alert(`the content you recently added is :
       
-      id: ${getInputedContentbyUser.id},
-      title: ${getInputedContentbyUser.title},
-      body: ${getInputedContentbyUser.body},
-      author: ${getInputedContentbyUser.author},
-      imageLink: ${getInputedContentbyUser.imageLink},
-      type: ${getInputedContentbyUser.type},
-      hashtags: ${getInputedContentbyUser.hashtags?.join(', ')}
-      `);
+    //   id: ${getInputedContentbyUser.id},
+    //   title: ${getInputedContentbyUser.title},
+    //   body: ${getInputedContentbyUser.body},
+    //   author: ${getInputedContentbyUser.author},
+    //   imageLink: ${getInputedContentbyUser.imageLink},
+    //   type: ${getInputedContentbyUser.type},
+    //   hashtags: ${getInputedContentbyUser.hashtags?.join(', ')}
+    //   `);
     DORAEMONCHARACTERS.push(getInputedContentbyUser);
     return of (DORAEMONCHARACTERS)
   }
@@ -61,26 +61,26 @@ export class DoraemonCharacterService {
 
 
     // prints alert before updating content 
-    alert(`You wants to update the content at ID: ${saveID}, 
+  //   alert(`You wants to update the content at ID: ${saveID}, 
 
-    THE OLD CONTENT IS:
-    id: ${DORAEMONCHARACTERS[elementIndex].id},
-    title: ${DORAEMONCHARACTERS[elementIndex].title},
-    body: ${DORAEMONCHARACTERS[elementIndex].body},
-    author: ${DORAEMONCHARACTERS[elementIndex].author},
-    imageLink: ${DORAEMONCHARACTERS[elementIndex].imageLink},
-    type: ${DORAEMONCHARACTERS[elementIndex].type},
-    hashtags: ${DORAEMONCHARACTERS[elementIndex].hashtags}
+  //   THE OLD CONTENT IS:
+  //   id: ${DORAEMONCHARACTERS[elementIndex].id},
+  //   title: ${DORAEMONCHARACTERS[elementIndex].title},
+  //   body: ${DORAEMONCHARACTERS[elementIndex].body},
+  //   author: ${DORAEMONCHARACTERS[elementIndex].author},
+  //   imageLink: ${DORAEMONCHARACTERS[elementIndex].imageLink},
+  //   type: ${DORAEMONCHARACTERS[elementIndex].type},
+  //   hashtags: ${DORAEMONCHARACTERS[elementIndex].hashtags}
 
-    PRESS OK TO UPDATE THE DORAEMON CHARACTER CONTENT AS:
-    id: ${saveID},
-    title: ${saveTitle},
-    body: ${saveBody},
-    author: ${saveAuthor},
-    imageLink: ${saveImageLink},
-    type: ${saveType},
-    hashtags: ${saveHashtags?.join(', ')}
-  `);
+  //   PRESS OK TO UPDATE THE DORAEMON CHARACTER CONTENT AS:
+  //   id: ${saveID},
+  //   title: ${saveTitle},
+  //   body: ${saveBody},
+  //   author: ${saveAuthor},
+  //   imageLink: ${saveImageLink},
+  //   type: ${saveType},
+  //   hashtags: ${saveHashtags?.join(', ')}
+  // `);
     
   // Updates the content according to input!
   if(elementIndex)
@@ -92,13 +92,13 @@ export class DoraemonCharacterService {
     DORAEMONCHARACTERS[elementIndex].type = saveType;
     DORAEMONCHARACTERS[elementIndex].hashtags = saveHashtags;
     // prints alert after updating content 
-    alert(`Congrats, the content sucessfully updated....`);
+    // alert(`Congrats, the content sucessfully updated....`);
     return of (DORAEMONCHARACTERS);
   }
   else{
      // prints alert after updating content 
-     alert(`Opps, the content was not updated....
-     CHECK SOME MISTAKES :()`);
+    //  alert(`Opps, the content was not updated....
+    //  CHECK SOME MISTAKES :()`);
      return of (DORAEMONCHARACTERS);
   }
 
@@ -119,10 +119,10 @@ export class DoraemonCharacterService {
       {   
         // saveDeletedArray.push(this.getDoraemonCharactersFromInput(getInputedNumberbyUser));
         save = DORAEMONCHARACTERS.splice(getInputedNumberbyUser , index);
-        alert(`Deleted doraemon Character from Array is : 
+        // alert(`Deleted doraemon Character from Array is : 
 
-        ${JSON.stringify(save)}
-        `);
+        // ${JSON.stringify(save)}
+        // `);
       }   
     })
     return save;

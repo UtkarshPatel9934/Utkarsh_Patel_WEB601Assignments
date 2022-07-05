@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { ContentCardComponent } from './content-card/content-card.component';
@@ -9,6 +8,10 @@ import { FilterPipePipe } from './pipes/filter-pipe.pipe';
 import { ApplyBorderPipePipe } from './pipes/apply-border-pipe.pipe';
 import { HighlightImportantDataDirective } from './directive/highlight-important-data.directive';
 
+
+// importing the app-router.module file
+import { AppRoutingModule } from './app-routing.module';
+import { ContentDetailComponent } from './content-detail/content-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +20,7 @@ import { HighlightImportantDataDirective } from './directive/highlight-important
     FilterPipePipe,
     ApplyBorderPipePipe,
     HighlightImportantDataDirective,
+    ContentDetailComponent,
   ],
   imports: [
     BrowserModule,

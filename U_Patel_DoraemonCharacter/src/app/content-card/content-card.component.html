@@ -12,18 +12,18 @@
 
 
 	<div class="content">
-		<h1 class="contentTitle" appHighlightImportantData [colour]="'yellow'"><span class="contentName">Title </span> <span class="vrline">&#9213;</span> {{charactersContent?.title}}</h1>
-		<h2 class="contentAuthor"><span class="contentName">Author </span> <span class="vrline">&#9213;</span> {{charactersContent?.author}}</h2>
+		<h1 class="contentTitle" appHighlightImportantData [colour]="'yellow'"><span class="contentName">Title </span> <span class="vrline">&#9213;</span><a [routerLink]="['/detail', charactersContent?.id]" routerLinkActive="active">{{charactersContent?.title}} </a></h1>
+		<!-- <h2 class="contentAuthor"><span class="contentName">Author </span> <span class="vrline">&#9213;</span> {{charactersContent?.author}}</h2> -->
 		<h3 appHighlightImportantData [applyBorderToOnlyType]="true" class="contentType"><span class="contentName">Type </span> <span class="vrline">&#9213;</span> {{charactersContent?.type}}</h3>
 
 
 		<!-- Added a if condition to check if Body Conent will displays or not.... -->
-		<p *ngIf="charactersContent?.body; else elseBlockForBody" class="contentBody"><span class="contentName">&#x2731;</span>  &nbsp; {{charactersContent?.body}}</p>
+		<!-- <p *ngIf="charactersContent?.body; else elseBlockForBody" class="contentBody"><span class="contentName">&#x2731;</span>  &nbsp; {{charactersContent?.body}}</p> -->
 
 		<!-- If Image is not set this will runs -->
-		<ng-template #elseBlockForBody>
+		<!-- <ng-template #elseBlockForBody>
 			<p class="contentBody"><span class="contentName">&#x2731;</span>  &nbsp; Sorry, no content available for this Character!</p>
-		</ng-template>
+		</ng-template> -->
 		<!-- If Image is not set this will runs -->
 
 

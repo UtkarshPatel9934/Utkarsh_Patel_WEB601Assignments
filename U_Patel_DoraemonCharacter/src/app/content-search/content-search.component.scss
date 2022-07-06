@@ -5,14 +5,15 @@
 	font-size: 50px;
 }
 #heading{
-	margin-top: 40px;
 	text-align: center;
-	font-size: 70px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	color: #ff0000;
-	letter-spacing: 10px;
-	background-color: #292826;
-	padding: 50px 0;
+		font-size: 50px;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		color: #ff0000;
+		letter-spacing: 10px;
+		background-color: #292826;
+		padding: 20px 0;
+		border: 5px solid red;
+		border-radius: 15px;
 }
 .singleCard{
 	-webkit-box-shadow: 0 0 30px rgb(0, 0, 0);

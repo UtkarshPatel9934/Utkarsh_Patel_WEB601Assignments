@@ -13,6 +13,8 @@ import { HighlightImportantDataDirective } from './directive/highlight-important
 import { AppRoutingModule } from './app-routing.module';
 import { ContentDetailComponent } from './content-detail/content-detail.component';
 import { ContentSearchComponent } from './content-search/content-search.component';
+import { NavbarComponentComponent } from './navbar-component/navbar-component.component';
+import { InvalidRouteComponentComponent } from './invalid-route-component/invalid-route-component.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +25,8 @@ import { ContentSearchComponent } from './content-search/content-search.componen
     HighlightImportantDataDirective,
     ContentDetailComponent,
     ContentSearchComponent,
+    NavbarComponentComponent,
+    InvalidRouteComponentComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,22 +1,31 @@
 #back-to-list{
-	background-color: crimson;
+	background-color: black;
 	color: whitesmoke;
 	padding: 25px;
 	font-size: 30px;
 	margin: 10px 0;
+	text-decoration: none;
 	display: inline-block;
 	border-radius: 20px;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+#back-to-list:hover{
+	-webkit-box-shadow: 0 0 10px red;
+	box-shadow: 0 0 10px red;
+	color: #ff0000;
+}
+
 #heading{
-	margin-top: 40px;
-		text-align: center;
-		font-size: 70px;
+	text-align: center;
+		font-size: 50px;
 		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 		color: #ff0000;
 		letter-spacing: 10px;
 		background-color: #292826;
-		padding: 50px 0;
+		padding: 20px 0;
+		border: 5px solid red;
+		border-radius: 15px;
 }
 .container{
 	padding: 20px;

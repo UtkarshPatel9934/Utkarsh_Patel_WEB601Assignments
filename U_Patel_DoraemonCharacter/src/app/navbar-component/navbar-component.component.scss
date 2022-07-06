@@ -1,0 +1,104 @@
+div {
+  display: flex;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background: #000;
+  border: 5px solid red;
+  border-radius: 15px;
+
+  h1 {
+    background: -webkit-linear-gradient(#eee, rgb(253, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    flex: 0.5;
+    font-size: 30px;
+    margin-left: 20px;
+//     justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  // ul{
+  // 	flex: 0.7;
+  // 	display: flex;
+  // 	flex-wrap: wrap;
+  // 	padding: 50px 0;
+  // 	justify-content:space-around;
+  // 	margin: 0 auto;
+
+  // 	li{
+  // 		list-style-type: none;
+
+  // 		a{
+  // 			background-color: beige;
+  // 			color: black;
+  // 			padding: 20px;
+  // 			border-radius: 20px;
+  // 			font-size: 30px;
+  // 			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  // 		}
+  // 	}
+  // }
+  ul {
+    flex: 0.5;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0px;
+    text-align: center;
+    padding: 8px;
+    background: #000;
+//     padding: 50px 0;
+
+    li {
+      display: inline-block;
+      list-style-type: none;
+	margin: 0 auto;
+	
+	a {
+	text-decoration: none;
+        padding: 16px;
+        display: inline-block;
+	padding: 20px;
+	color: grey;
+	border-radius: 20px;
+	font-size: 30px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	
+        &:hover {
+		color: whitesmoke;
+        }
+        &.active {
+          color: red;
+        }
+      }
+    }
+  }
+
+  .active {
+    color: green;
+  }
+}
+
+// ul{
+// 	display: flex;
+// 	flex-wrap: wrap;
+// 	background: #000;
+// 	padding: 50px 0;
+// }
+
+// li{
+// 	list-style-type: none;
+// 	margin: 0 auto;
+// }
+
+// li > a{
+// 	background-color: beige;
+// 	color: black;
+// 	padding: 20px;
+// 	border-radius: 20px;
+// 	font-size: 30px;
+// 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+// }
+// #header{
+// 	style="font-size: 30px;text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: -webkit-linear-gradient(#eee, rgb(253, 0, 0));-webkit-background-clip: text;-webkit-text-fill-color: transparent;"
+// }

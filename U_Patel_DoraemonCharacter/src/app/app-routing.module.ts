@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContentDetailComponent } from './content-detail/content-detail.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { ContentSearchComponent } from './content-search/content-search.component';
+import { InvalidRouteComponentComponent } from './invalid-route-component/invalid-route-component.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
     path: "search",
     component: ContentSearchComponent
   },
+  {
+    path: "**",
+    component: InvalidRouteComponentComponent
+  }
 ];
 
 @NgModule({

@@ -11,6 +11,9 @@ import {Content} from '../models/content';
 })
 export class ContentDetailComponent implements OnInit {
   id?: number;
+
+
+  idForPrevious?: number;
   charactersContent?: Content;
 
   printDataOnConsole()
@@ -29,6 +32,14 @@ export class ContentDetailComponent implements OnInit {
 
     this.route.paramMap.subscribe(params => {
       this.id = +(params.get('id') ?? 0); // uses the + unary operator
+
+      if(this.id !== 0)
+      {
+        this.idForPrevious = this.id -1;
+      }
+      else{
+        this.idForPrevious = 0;
+      }
 
       this.contentService.getDoraemonCharacterDetails(this.id).subscribe(singleItem => {
         if (singleItem) {

@@ -1,3 +1,4 @@
+import { InMemoryDbService } from "angular-in-memory-web-api";
 import { Injectable } from '@angular/core';
 import {Content} from '../models/content';
 import { DEFAULTCHARACTERCONTENT, DORAEMONCHARACTERS } from '../data/mock-doraemonCharacters';

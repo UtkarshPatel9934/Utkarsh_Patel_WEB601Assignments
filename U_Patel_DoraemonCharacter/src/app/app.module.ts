@@ -15,6 +15,12 @@ import { ContentDetailComponent } from './content-detail/content-detail.componen
 import { ContentSearchComponent } from './content-search/content-search.component';
 import { NavbarComponentComponent } from './navbar-component/navbar-component.component';
 import { InvalidRouteComponentComponent } from './invalid-route-component/invalid-route-component.component';
+
+
+import { HttpClientModule } from "@angular/common/http";
+import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
+import { InMemoryDataService } from "./services/in-memory-data.service";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +36,13 @@ import { InvalidRouteComponentComponent } from './invalid-route-component/invali
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, {
+      delay: 1000,
+    }),
+
   ],
   providers: [],
   bootstrap: [AppComponent]

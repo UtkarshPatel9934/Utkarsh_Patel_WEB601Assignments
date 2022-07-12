@@ -1,5 +1,5 @@
 export interface Content {
-	id: number;
+	id?: number;
         title: string;
         body?: string;
         author: string;

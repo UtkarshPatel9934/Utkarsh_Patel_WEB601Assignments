@@ -1,1 +1,37 @@
-<h1>change-content works!</h1>
+
+
+<h1 id="heading">Welcome to Change Content Page</h1>
+<div class="form">
+	<div class="form__container">
+		<div class="brand-logo"></div>
+		<div class="inputs">
+			<form #myForm>
+				<label for="title">TITLE</label>
+				<input id="title" name="title" [(ngModel)]="contentItem.title" placeholder="Enter Title here..." />
+				<label for="body">BODY</label>
+				<input id="body" name="body" [(ngModel)]="contentItem.body" placeholder="Enter Body here..." />
+				<label for="author">AUTHOR</label>
+				<input id="author" name="author" [(ngModel)]="contentItem.author" placeholder="Enter Author here..." />
+				<label for="imageLink">IMAGE LINK</label>
+				<input id="imageLink" name="imageLink" [(ngModel)]="contentItem.imageLink" placeholder="Enter Image Link here..." />
+				<label for="type">TYPE</label>
+				<input id="type" name="type" [(ngModel)]="contentItem.type" placeholder="Enter Type here...">
+				<label for="hashtags">HASHTAGS</label>
+				<input id="hashtags" name="hashtags" [(ngModel)]="tempTags" placeholder="Enter Hashtags here..." />
+				
+		
+				<button (click)="addContentToServer()" type="submit">ADD CONTENT</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- 
+	id?: number;
+        title: string;
+        body?: string;
+        author: string;
+        imageLink?: string;
+        type: string;
+        hashtags?:string[];
+ -->

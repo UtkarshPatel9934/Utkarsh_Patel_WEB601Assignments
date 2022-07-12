@@ -6,7 +6,7 @@ import { DEFAULTCHARACTERCONTENT, DORAEMONCHARACTERS } from '../data/mock-doraem
 @Injectable({
   providedIn: 'root'
 })
-export class InMemoryDataService {
+export class InMemoryDataService implements InMemoryDbService{
 
   constructor() { }
 

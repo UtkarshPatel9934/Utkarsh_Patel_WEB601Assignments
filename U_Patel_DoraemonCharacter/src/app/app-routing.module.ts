@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ChangeContentComponent } from './change-content/change-content.component';
 
 // added the import statement for the Content Detail Component
 import { ContentDetailComponent } from './content-detail/content-detail.component';
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: "search",
     component: ContentSearchComponent
+  },
+  {
+    path: "addContent",
+    component: ChangeContentComponent
   },
   {
     path: "**",

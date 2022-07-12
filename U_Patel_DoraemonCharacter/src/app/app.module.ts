@@ -20,6 +20,7 @@ import { InvalidRouteComponentComponent } from './invalid-route-component/invali
 import { HttpClientModule } from "@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from "./services/in-memory-data.service";
+import { ChangeContentComponent } from './change-content/change-content.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { InMemoryDataService } from "./services/in-memory-data.service";
     ContentSearchComponent,
     NavbarComponentComponent,
     InvalidRouteComponentComponent,
+    ChangeContentComponent,
   ],
   imports: [
     BrowserModule,

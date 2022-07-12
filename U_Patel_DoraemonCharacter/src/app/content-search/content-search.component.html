@@ -13,23 +13,23 @@
 
 
 <!-- <h1 id="head">Single Card form Data</h1> -->
-<div class="singleCard" *ngFor="let item of singleContent">
+<div class="singleCard" *ngIf="singleContent && this.contentSearchMessage.message !== 'Opps! Character Not Found'">
 	<div class="contentCard">
-		<img *ngIf="item?.imageLink;" [src]="item?.imageLink" class="contentImg" alt="Character Picture">
+		<img *ngIf="singleContent?.imageLink;" [src]="singleContent?.imageLink" class="contentImg" alt="Character Picture">
 		<div class="content">
 			<h1 class="contentTitle" appHighlightImportantData [colour]="'yellow'"><span
 					class="contentName">Title </span> <span class="vrline">&#9213;</span>
-				{{item?.title}}</h1>
+				{{singleContent?.title}}</h1>
 			<h2 class="contentAuthor"><span class="contentName">Author </span> <span
-					class="vrline">&#9213;</span> {{item?.author}}</h2>
+					class="vrline">&#9213;</span> {{singleContent?.author}}</h2>
 			<h3 appHighlightImportantData [applyBorderToOnlyType]="true" class="contentType"><span
 					class="contentName">Type </span> <span class="vrline">&#9213;</span>
-				{{item?.type}}</h3>
-			<p *ngIf="item?.body;" class="contentBody"><span class="contentName">&#x2731;</span> &nbsp;
-				{{item?.body}}</p>
-			<span *ngIf="item?.hashtags?.length !== 0 && item?.hashtags;">
+				{{singleContent?.type}}</h3>
+			<p *ngIf="singleContent?.body;" class="contentBody"><span class="contentName">&#x2731;</span> &nbsp;
+				{{singleContent?.body}}</p>
+			<span *ngIf="singleContent?.hashtags?.length !== 0 && singleContent?.hashtags;">
 				<div appHighlightImportantData [applyColorToHashtags]="true"
-					*ngFor="let Hashtags of item?.hashtags">
+					*ngFor="let Hashtags of singleContent?.hashtags">
 					<span id="hastags">&#10522;</span> {{Hashtags}}
 				</div>
 			</span>

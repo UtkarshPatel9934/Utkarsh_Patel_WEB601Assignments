@@ -27,7 +27,7 @@ export class DoraemonCharacterService {
   // return the content array from the file in the data folder
   getDoraemonCahractersContent(): Observable<Content[]> {
     // return of(DORAEMONCHARACTERS);
-    return this.http.get<Content[]>("/api/doraemon");
+    return this.http.get<Content[]>("/api/doraemon/");
   }
 
 
@@ -146,7 +146,7 @@ export class DoraemonCharacterService {
 
 
   updateDoraemonCharactersContent(getInputedContentbyUser:Content): Observable<Content[]>{
-    return this.http.put<any>("api/chess", getInputedContentbyUser, this.httpOptions);
+    return this.http.put<any>("api/doraemon", getInputedContentbyUser, this.httpOptions);
   }
 
 
@@ -171,6 +171,29 @@ export class DoraemonCharacterService {
   //   })
   //   return save;
   // }
+  
+  deleteDoraemonCharacters(getInputedNumberbyUser: number): Observable<Content[]>{
+    var save:any;
+  this.http.delete("/api/doraemon/" + getInputedNumberbyUser).subscribe(data => {
+    save = data
+  });
+  return save;
+
+    // let index = 1;
+    // var save:any;
+    // DORAEMONCHARACTERS.forEach(findIndex => {
+    //   if(findIndex.id === getInputedNumberbyUser)
+    //   {   
+    //     // saveDeletedArray.push(this.getDoraemonCharactersFromInput(getInputedNumberbyUser));
+    //     save = DORAEMONCHARACTERS.splice(getInputedNumberbyUser , index);
+    //     // alert(`Deleted doraemon Character from Array is : 
+
+    //     // ${JSON.stringify(save)}
+    //     // `);
+    //   }   
+    // })
+    // return save;
+  }
   
 
   

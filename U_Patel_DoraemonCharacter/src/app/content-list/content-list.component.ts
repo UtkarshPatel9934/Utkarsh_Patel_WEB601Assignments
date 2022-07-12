@@ -99,10 +99,7 @@ export class ContentListComponent implements OnInit {
   ngOnInit(): void {
 
 
-    // get all the doraemon characters
-    this.contentService.getDoraemonCahractersContent().subscribe((contentArrayFromService: Content[]) => {
-      this.doraemonCharacters = contentArrayFromService;
-  })
+    
 
 
   // get the doraemon characters based on the input 
@@ -114,11 +111,23 @@ export class ContentListComponent implements OnInit {
     
 
 
-    this.contentService.addDoraemonCharacters(this.setDoraemonCharacter);
+    this.contentService.addDoraemonCharacters(this.setDoraemonCharacter).subscribe(newContentFromServer =>
+      console.log("Success! New content added", newContentFromServer)
+      );
 
-    this.contentService.updateDoraemonCharactersContent(this.updateDoraemonCharacter);
+      // Commented Out ==> Solving Delete Operation
+      this.contentService.deleteDoraemonCharacters(1);
+      // Commented Out ==> Solving Delete Operation
 
-    // this.contentService.deleteDoraemonCharacters(3);
+    this.contentService.updateDoraemonCharactersContent(this.updateDoraemonCharacter).subscribe(updateContentFromServer =>
+      console.log("Success! Content updated", updateContentFromServer)
+      );;
+
+    // get all the doraemon characters
+    this.contentService.getDoraemonCahractersContent().subscribe((contentArrayFromService: Content[]) => {
+      this.doraemonCharacters = contentArrayFromService;
+  });
 };
+
 
 }

@@ -35,9 +35,9 @@ checkForIdInList(idValue: string): void {
   if (this.checkForErrors.some(character => character.id == Number(idValue))) {
     this.contentSearchMessage.message = "Hurray! Character Found";
     this.contentSearchMessage.found = true;
-    this.contentService.getDoraemonCharactersFromInput(Number(idValue)).subscribe((contentArrayFromService) => {
-      this.singleContent = contentArrayFromService;
-    }) 
+    // this.contentService.getDoraemonCharactersFromInput(Number(idValue)).subscribe((contentArrayFromService) => {
+    //   this.singleContent = contentArrayFromService;
+    // }) 
   }
   else {
     this.contentSearchMessage.message = "Opps! Character Not Found";

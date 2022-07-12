@@ -118,7 +118,7 @@ export class ContentListComponent implements OnInit {
 
     this.contentService.updateDoraemonCharactersContent(this.updateDoraemonCharacter);
 
-    this.contentService.deleteDoraemonCharacters(3);
+    // this.contentService.deleteDoraemonCharacters(3);
 };
 
 }

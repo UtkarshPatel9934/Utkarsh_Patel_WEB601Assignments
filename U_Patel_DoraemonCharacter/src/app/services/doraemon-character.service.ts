@@ -1,44 +1,66 @@
 import { InMemoryDbService } from "angular-in-memory-web-api";
 import { Injectable } from '@angular/core';
 import {Content} from '../models/content';
-import { DEFAULTCHARACTERCONTENT, DORAEMONCHARACTERS } from '../data/mock-doraemonCharacters';
 import { Observable, of } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+// import { DEFAULTCHARACTERCONTENT, DORAEMONCHARACTERS } from '../data/mock-doraemonCharacters';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DoraemonCharacterService {
 
-  constructor() { }
+  // Added
+  private httpOptions = {
+    headers: new HttpHeaders({
+      'Content-type':
+        'application/json'
+    })
+  }
+
+  // Removed
+  // constructor() { }
+  // Added
+  constructor(private http: HttpClient) { }
 
 
   // return the content array from the file in the data folder
   getDoraemonCahractersContent(): Observable<Content[]> {
-    return of(DORAEMONCHARACTERS);
+    // return of(DORAEMONCHARACTERS);
+    return this.http.get<Content[]>("/api/doraemon");
   }
 
 
   // a method that accepts a number and returns the content item in the array that contains the same id as the number parameter
-  getDoraemonCharactersFromInput(getInputedNumberbyUser: number): Observable<Content[]> {
-    return of (DORAEMONCHARACTERS.filter(dorarmonCharcter => {
-      return  getInputedNumberbyUser === dorarmonCharcter.id;
-    }));
+  // getDoraemonCharactersFromInput(getInputedNumberbyUser: number): Observable<Content[]> {
+  //   return of (DORAEMONCHARACTERS.filter(dorarmonCharcter => {
+  //     return  getInputedNumberbyUser === dorarmonCharcter.id;
+  //   }));
+  // }
+  getDoraemonCharactersFromInput(getInputedNumberbyUser: number): Observable<Content> {
+    return this.http.get<Content>("/api/doraemon/" + getInputedNumberbyUser);
   }
 
 
+  // getDoraemonCharacterDetails(getInputedNumberbyUser: number): Observable<Content> {
+  //   for (var i = 0; i < DORAEMONCHARACTERS.length; i++) // iterate through each chess champion
+  //   {
+  //     if (DORAEMONCHARACTERS[i].id === getInputedNumberbyUser) { // found the item
+  //       return of(DORAEMONCHARACTERS[i]);
+  //     }
+  //   }
+  //   return of(DEFAULTCHARACTERCONTENT); // need to return something if the content isn't there
+  // }
   getDoraemonCharacterDetails(getInputedNumberbyUser: number): Observable<Content> {
-    for (var i = 0; i < DORAEMONCHARACTERS.length; i++) // iterate through each chess champion
-    {
-      if (DORAEMONCHARACTERS[i].id === getInputedNumberbyUser) { // found the item
-        return of(DORAEMONCHARACTERS[i]);
-      }
-    }
-    return of(DEFAULTCHARACTERCONTENT); // need to return something if the content isn't there
+    return this.http.get<Content>("/api/doraemon/" + getInputedNumberbyUser);
   }
 
 
   // A method that accepts a Content item as an input, adds the item to the array, and returns the array after the item is added
-  addDoraemonCharacters(getInputedContentbyUser:Content): Observable<Content[]>{
+
+  // Removed
+  // addDoraemonCharacters(getInputedContentbyUser:Content): Observable<Content[]>{
+  addDoraemonCharacters(getInputedContentbyUser:Content): Observable<Content>{
     // alert(`the content you recently added is :
       
     //   id: ${getInputedContentbyUser.id},
@@ -49,14 +71,19 @@ export class DoraemonCharacterService {
     //   type: ${getInputedContentbyUser.type},
     //   hashtags: ${getInputedContentbyUser.hashtags?.join(', ')}
     //   `);
-    DORAEMONCHARACTERS.push(getInputedContentbyUser);
-    return of (DORAEMONCHARACTERS)
+
+    // Removed
+   /*  DORAEMONCHARACTERS.push(getInputedContentbyUser);
+    return of (DORAEMONCHARACTERS) */
+    console.log("Added Works: ");
+    return this.http.post<Content>("/api/doraemon", getInputedContentbyUser, this.httpOptions)
   }
   
   
   // A method that accepts a Content item as an input, updates an existing item in the array that has the same id as the input parameter, and returns the array after the item is updated
   
-  updateDoraemonCharactersContent(getInputedContentbyUser:Content): Observable<Content[]>{
+  // Removed
+  /* updateDoraemonCharactersContent(getInputedContentbyUser:Content): Observable<Content[]>{
     
     // fetch and save the types:
     let saveID = getInputedContentbyUser.id;
@@ -115,30 +142,37 @@ export class DoraemonCharacterService {
   }
 
 
-  }
+  } */
 
+
+  updateDoraemonCharactersContent(getInputedContentbyUser:Content): Observable<Content[]>{
+    return this.http.put<any>("api/chess", getInputedContentbyUser, this.httpOptions);
+  }
 
 
 
   // A method that accepts a number, removes the item from the array that has the same id as the number parameter, and returns the Content item that was removed
 
-  deleteDoraemonCharacters(getInputedNumberbyUser: number): Observable<Content[]>{
+  // Removed
+  // deleteDoraemonCharacters(getInputedNumberbyUser: number): Observable<Content[]>{
 
-    let index = 1;
-    var save:any;
-    DORAEMONCHARACTERS.forEach(findIndex => {
-      if(findIndex.id === getInputedNumberbyUser)
-      {   
-        // saveDeletedArray.push(this.getDoraemonCharactersFromInput(getInputedNumberbyUser));
-        save = DORAEMONCHARACTERS.splice(getInputedNumberbyUser , index);
-        // alert(`Deleted doraemon Character from Array is : 
+  //   let index = 1;
+  //   var save:any;
+  //   DORAEMONCHARACTERS.forEach(findIndex => {
+  //     if(findIndex.id === getInputedNumberbyUser)
+  //     {   
+  //       // saveDeletedArray.push(this.getDoraemonCharactersFromInput(getInputedNumberbyUser));
+  //       save = DORAEMONCHARACTERS.splice(getInputedNumberbyUser , index);
+  //       // alert(`Deleted doraemon Character from Array is : 
 
-        // ${JSON.stringify(save)}
-        // `);
-      }   
-    })
-    return save;
-  }
+  //       // ${JSON.stringify(save)}
+  //       // `);
+  //     }   
+  //   })
+  //   return save;
+  // }
+  
+
   
 
 

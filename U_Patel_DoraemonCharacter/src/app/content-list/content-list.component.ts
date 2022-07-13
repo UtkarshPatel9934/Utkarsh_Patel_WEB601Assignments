@@ -119,9 +119,9 @@ export class ContentListComponent implements OnInit {
       this.contentService.deleteDoraemonCharacters(1);
       // Commented Out ==> Solving Delete Operation
 
-    this.contentService.updateDoraemonCharactersContent(this.updateDoraemonCharacter).subscribe(updateContentFromServer =>
-      console.log("Success! Content updated", updateContentFromServer)
-      );;
+    // this.contentService.updateDoraemonCharactersContent(this.updateDoraemonCharacter).subscribe(updateContentFromServer =>
+    //   console.log("Success! Content updated from Content List", updateContentFromServer)
+    //   );;
 
     // get all the doraemon characters
     this.contentService.getDoraemonCahractersContent().subscribe((contentArrayFromService: Content[]) => {

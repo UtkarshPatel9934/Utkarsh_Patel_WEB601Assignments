@@ -1,7 +1,7 @@
 import { InMemoryDbService } from "angular-in-memory-web-api";
 import { Injectable } from '@angular/core';
 import {Content} from '../models/content';
-import { Observable, of } from 'rxjs';
+import { catchError, Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 // import { DEFAULTCHARACTERCONTENT, DORAEMONCHARACTERS } from '../data/mock-doraemonCharacters';
 
@@ -17,6 +17,7 @@ export class DoraemonCharacterService {
         'application/json'
     })
   }
+ 
 
   // Removed
   // constructor() { }
@@ -145,10 +146,16 @@ export class DoraemonCharacterService {
   } */
 
 
-  updateDoraemonCharactersContent(getInputedContentbyUser:Content): Observable<Content[]>{
-    return this.http.put<any>("api/doraemon", getInputedContentbyUser, this.httpOptions);
+  // updateDoraemonCharactersContent(getInputedContentbyUser: Content): Observable<any>{
+  //   return this.http.put<any>("/api/doraemon/" + getInputedContentbyUser, this.httpOptions);
+  // }
+  updateCharacter(contentItem: Content): Observable<any> {
+    return this.http.put<any>("api/doraemon/", contentItem, this.httpOptions);
   }
 
+  // updateCharacterContent(getInputedContentbyUser: Content): Observable<any>{
+  //   return this.http.put<any>("api/doraemon")
+  // }
 
 
   // A method that accepts a number, removes the item from the array that has the same id as the number parameter, and returns the Content item that was removed

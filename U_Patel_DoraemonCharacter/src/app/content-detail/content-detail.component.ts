@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
-
 import { DoraemonCharacterService } from '../services/doraemon-character.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import {Content} from '../models/content';

@@ -52,12 +52,11 @@ export class ChangeContentComponent implements OnInit {
     }
     else
     {
-      console.log("Update Content works Here....")
-      this.verify_and_refirect_Route = false;
+        console.log("Update Content works Here....")
+        this.verify_and_refirect_Route = false;
+      }
     }
-  }
-
-   
+  
   clearForm()
   {
     (document.getElementById("title") as HTMLInputElement).value = "";
@@ -80,7 +79,7 @@ export class ChangeContentComponent implements OnInit {
     this.contentItem.hashtags = this.tempTags.split(", ");
     this.contentService.addDoraemonCharacters(this.contentItem)
     .subscribe(newContentFromServer =>
-      console.log("Success! New content added", newContentFromServer)
+      console.log("Success! New content added", this.contentItem)
       );
       this.clearForm();
   }

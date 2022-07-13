@@ -64,6 +64,7 @@ input::placeholder {
 
 input {
   background: #ecf0f3;
+  color: red;
   padding: 10px;
   padding-left: 20px;
   height: 50px;
@@ -83,7 +84,13 @@ button {
   box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
   transition: 0.5s;
 }
-
+.Note{
+	text-align: center;
+	font-size: 20px;
+	color: red;
+	font-weight: bold;
+	border: 2px solid red;
+}
 button:hover {
   box-shadow: none;
 }

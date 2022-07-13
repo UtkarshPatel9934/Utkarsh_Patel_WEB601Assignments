@@ -33,14 +33,22 @@ export class ChangeContentComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      this.id = +(params.get('id') ?? 0); 
+      this.id = +(params.get('id') ?? 0);
       this.contentItem.id = this.id;
+      if(this.id)
+    this.contentService.getDoraemonCharacterDetails(this.id).subscribe(saveData => {
+      (document.getElementById("title") as HTMLInputElement).value = saveData.title;
+      (document.getElementById("body") as HTMLInputElement).value = saveData.body ?saveData.body: "";
+      (document.getElementById("author") as HTMLInputElement).value = saveData.author ? saveData.author: "";
+      (document.getElementById("imageLink") as HTMLInputElement).value = saveData.imageLink ? saveData.imageLink: "";
+      (document.getElementById("type") as HTMLInputElement).value = saveData.type ? saveData.type: "";
+      (document.getElementById("hashtags") as HTMLInputElement).value = saveData.title ? saveData.title: "";
+    })
     });
     if(this.saveRouteURL === '/addContent')
     {
       console.log("Add Content works Here....")
       this.verify_and_refirect_Route = true;
-      
     }
     else
     {
@@ -77,5 +85,9 @@ export class ChangeContentComponent implements OnInit {
       this.clearForm();
   }
 
+}
+
+function savedata(savedata: any) {
+  throw new Error('Function not implemented.');
 }
 

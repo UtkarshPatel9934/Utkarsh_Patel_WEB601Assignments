@@ -23,23 +23,76 @@
 		<h2>{{foundContentMsg}}</h2>
 		<app-content-card class="applyThickBorder" *ngFor="let item of doraemonCharacters | applyBorderPipe:valueToPipe;" [charactersContent]="item"></app-content-card>
 </div>
-<hr>
-<h1>Filterd Content Type: "Men"</h1>
-<div>
-	<app-content-card  *ngFor="let item of doraemonCharacters | filterPipe:'Men'; let even = even; let odd = odd;" class="menCards" [class.even1]="even" [class.odd1]="odd" [charactersContent]="item"></app-content-card>
+<mat-divider></mat-divider>
+
+
+<div class="accordian__mat">
+	<mat-accordion>
+		<mat-expansion-panel class="accordian__mat__container" (opened)="panelOpenState = true"
+		(closed)="panelOpenState = false">
+			<mat-expansion-panel-header>
+				<mat-panel-title class="accordian__mat__title">
+					<h1>Filterd Content Type: "Men"</h1>
+				</mat-panel-title>
+				<mat-panel-description class="accordian__mat__desc">
+					&#8594; Click Me To {{panelOpenState ? 'Close' : 'Open'}}
+				</mat-panel-description>
+			</mat-expansion-panel-header>
+			<div class="accordian__mat__content">
+				<app-content-card  *ngFor="let item of doraemonCharacters | filterPipe:'Men'; let even = even; let odd = odd;" class="menCards" [class.even1]="even" [class.odd1]="odd" [charactersContent]="item"></app-content-card>
+			</div>
+		</mat-expansion-panel>
+	</mat-accordion>
+
 </div>
 
-<hr>
+<mat-divider></mat-divider>
 
-<h1>Filterd Content Type: "Women"</h1>
-<div>
-	<app-content-card  *ngFor="let item of doraemonCharacters | filterPipe:'Women'; let even = even; let odd = odd" class="womenCards" [class.even1]="even" [class.odd1]="odd" [charactersContent]="item"></app-content-card>
+
+<div class="accordian__mat">
+	<mat-accordion>
+		<mat-expansion-panel class="accordian__mat__container" (opened)="panelOpenState = true"
+		(closed)="panelOpenState = false">
+			<mat-expansion-panel-header>
+				<mat-panel-title class="accordian__mat__title">
+					<h1>Filterd Content Type: "Women"</h1>
+				</mat-panel-title>
+				<mat-panel-description class="accordian__mat__desc">
+					&#8594; Click Me To {{panelOpenState ? 'Close' : 'Open'}}
+				</mat-panel-description>
+			</mat-expansion-panel-header>
+			<div class="accordian__mat__content">
+				<app-content-card  *ngFor="let item of doraemonCharacters | filterPipe:'Women'; let even = even; let odd = odd" class="womenCards" [class.even1]="even" [class.odd1]="odd" [charactersContent]="item"></app-content-card>
+			</div>
+		</mat-expansion-panel>
+	</mat-accordion>
+
 </div>
 
-<hr>
 
-<h1>Filterd Content Type: ""</h1>
-<div>
-	<app-content-card  *ngFor="let item of doraemonCharacters | filterPipe:''; let even = even; let odd = odd" class="noTypeCards" [class.even1]="even" [class.odd1]="odd" [charactersContent]="item"></app-content-card>
+
+<mat-divider></mat-divider>
+
+<div class="accordian__mat">
+	<mat-accordion>
+		<mat-expansion-panel class="accordian__mat__container" (opened)="panelOpenState = true"
+		(closed)="panelOpenState = false">
+			<mat-expansion-panel-header>
+				<mat-panel-title class="accordian__mat__title">
+					<h1>Filterd Content Type: ""</h1>
+				</mat-panel-title>
+				<mat-panel-description class="accordian__mat__desc">
+					&#8594; Click Me To {{panelOpenState ? 'Close' : 'Open'}}
+				</mat-panel-description>
+			</mat-expansion-panel-header>
+			<div class="accordian__mat__content">
+				<app-content-card  *ngFor="let item of doraemonCharacters | filterPipe:''; let even = even; let odd = odd" class="noTypeCards" [class.even1]="even" [class.odd1]="odd" [charactersContent]="item"></app-content-card>
+			</div>
+		</mat-expansion-panel>
+	</mat-accordion>
+
 </div>
+
+
+
 

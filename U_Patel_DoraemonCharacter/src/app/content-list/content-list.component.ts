@@ -10,6 +10,7 @@ import { DoraemonCharacterService } from '../services/doraemon-character.service
 export class ContentListComponent implements OnInit {
   doraemonCharacters: Content[];
 
+  panelOpenState = false;
 
 
 

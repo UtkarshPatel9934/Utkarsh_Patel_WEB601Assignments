@@ -5,21 +5,38 @@
 			<div class="brand-logo"></div>
 			<div class="inputs">
 				<form #myForm>
-					<label for="title">TITLE</label>
-					<input id="title" name="title" [(ngModel)]="contentItem.title" placeholder="Enter Title here..." />
-					<label for="body">BODY</label>
-					<input id="body" name="body" [(ngModel)]="contentItem.body" placeholder="Enter Body here..." />
-					<label for="author">AUTHOR</label>
-					<input id="author" name="author" [(ngModel)]="contentItem.author" placeholder="Enter Author here..." />
-					<label for="imageLink">IMAGE LINK</label>
-					<input id="imageLink" name="imageLink" [(ngModel)]="contentItem.imageLink" placeholder="Enter Image Link here..." />
-					<label for="type">TYPE</label>
-					<input id="type" name="type" [(ngModel)]="contentItem.type" placeholder="Enter Type here...">
-					<label for="hashtags">HASHTAGS</label>
-					<input id="hashtags" name="hashtags" [(ngModel)]="tempTags" placeholder="Enter Hashtags here..." />
+					<mat-form-field color="primary" appearance="fill">
+						<mat-label for="title">TITLE</mat-label>
+						<input id="title" name="title" matInput [(ngModel)]="contentItem.title" placeholder="Enter Title here...">
+					</mat-form-field>
+
+					<mat-form-field color="primary" appearance="fill">
+						<mat-label for="body">BODY</mat-label>
+						<input id="body" name="body" matInput [(ngModel)]="contentItem.body" placeholder="Enter Body here...">
+					</mat-form-field>
+
+					<mat-form-field color="primary" appearance="fill">
+						<mat-label for="author">AUTHOR</mat-label>
+						<input id="author" name="author" matInput [(ngModel)]="contentItem.author" placeholder="Enter Author here...">
+					</mat-form-field>
+					
+					<mat-form-field color="primary" appearance="fill">
+						<mat-label for="imageLink">IMAGE LINK</mat-label>
+						<input id="imageLink" name="imageLink" matInput [(ngModel)]="contentItem.imageLink" placeholder="Enter Image Link here...">
+					</mat-form-field>
+					
+					<mat-form-field color="primary" appearance="fill">
+						<mat-label for="type">TYPE</mat-label>
+						<input id="type" name="type" matInput [(ngModel)]="contentItem.type" placeholder="Enter Type here...">
+					</mat-form-field>
+					
+					<mat-form-field color="primary" appearance="fill">
+						<mat-label for="hashtags">HASHTAGS</mat-label>
+						<input id="hashtags" name="hashtags" matInput [(ngModel)]="tempTags" placeholder="Enter Hashtags here...">
+					</mat-form-field>
 					
 			
-					<button (click)="updateContentToServer()" type="submit">UPDATE CONTENT</button>
+					<button mat-raised-button color="warn" (click)="updateContentToServer()" type="submit">UPDATE CONTENT</button>
 				</form>
 			</div>
 		</div>
@@ -36,21 +53,38 @@
 			<div class="brand-logo"></div>
 			<div class="inputs">
 				<form #myForm>
-					<label for="title">TITLE</label>
-					<input id="title" name="title" [(ngModel)]="contentItem.title" placeholder="Enter Title here..." />
-					<label for="body">BODY</label>
-					<input id="body" name="body" [(ngModel)]="contentItem.body" placeholder="Enter Body here..." />
-					<label for="author">AUTHOR</label>
-					<input id="author" name="author" [(ngModel)]="contentItem.author" placeholder="Enter Author here..." />
-					<label for="imageLink">IMAGE LINK</label>
-					<input id="imageLink" name="imageLink" [(ngModel)]="contentItem.imageLink" placeholder="Enter Image Link here..." />
-					<label for="type">TYPE</label>
-					<input id="type" name="type" [(ngModel)]="contentItem.type" placeholder="Enter Type here...">
-					<label for="hashtags">HASHTAGS</label>
-					<input id="hashtags" name="hashtags" [(ngModel)]="tempTags" placeholder="Enter Hashtags here..." />
+					<mat-form-field color="primary" appearance="fill">
+						<mat-label for="title">TITLE</mat-label>
+						<input id="title" name="title" matInput [(ngModel)]="contentItem.title" placeholder="Enter Title here...">
+					</mat-form-field>
+
+					<mat-form-field color="primary" appearance="fill">
+						<mat-label for="body">BODY</mat-label>
+						<input id="body" name="body" matInput [(ngModel)]="contentItem.body" placeholder="Enter Body here...">
+					</mat-form-field>
+
+					<mat-form-field color="primary" appearance="fill">
+						<mat-label for="author">AUTHOR</mat-label>
+						<input id="author" name="author" matInput [(ngModel)]="contentItem.author" placeholder="Enter Author here...">
+					</mat-form-field>
+					
+					<mat-form-field color="primary" appearance="fill">
+						<mat-label for="imageLink">IMAGE LINK</mat-label>
+						<input id="imageLink" name="imageLink" matInput [(ngModel)]="contentItem.imageLink" placeholder="Enter Image Link here...">
+					</mat-form-field>
+					
+					<mat-form-field color="primary" appearance="fill">
+						<mat-label for="type">TYPE</mat-label>
+						<input id="type" name="type" matInput [(ngModel)]="contentItem.type" placeholder="Enter Type here...">
+					</mat-form-field>
+					
+					<mat-form-field color="primary" appearance="fill">
+						<mat-label for="hashtags">HASHTAGS</mat-label>
+						<input id="hashtags" name="hashtags" matInput [(ngModel)]="tempTags" placeholder="Enter Hashtags here...">
+					</mat-form-field>
 					
 			
-					<button (click)="addContentToServer()" type="submit">ADD CONTENT</button>
+					<button (click)="addContentToServer()" mat-raised-button color="warn" type="submit">ADD CONTENT</button>
 				</form>
 			</div>
 		</div>

@@ -62,9 +62,9 @@
 }
 
 input{
-	background-color: beige;
-	border: 1px solid red;
-	width: 30%;
+	// background-color: beige;
+	// border: 1px solid red;
+	width: 50%;
 	padding: 35px 32px;
 	text-align: center;
 	text-decoration: none;
@@ -72,18 +72,23 @@ input{
 	font-size: 16px;
 	margin-right: 10px;
 }
-input::placeholder{
-	color: #ff0000;
-}
+// input::placeholder{
+// 	color: #ff0000;
+// }
 
 .getUserInputBtn{
 	padding: 35px 32px;
 	text-align: center;
 	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
+	display: block;
+	margin: 0 auto;
+	width: 50%;
+	font-size: 1.7rem;
 }
 .search-form{
 	margin: 0 auto;
 	text-align: center;
+}
+mat-form-field, input {
+	width: 50%;
 }

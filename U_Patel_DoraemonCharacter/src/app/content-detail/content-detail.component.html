@@ -1,15 +1,15 @@
 
 
-<a id="back-to-list" routerLink="/list">Back to Content List</a>
+<a id="back-to-list" mat-raised-button color="warn" routerLink="/list">Back to Content List</a>
 <br>
-<a id="back-to-list" routerLink="/detail/{{this.idForPrevious}}">Previous Content Detail</a>
+<a id="back-to-list" mat-raised-button color="warn" routerLink="/detail/{{this.idForPrevious}}">Previous Content Detail</a>
 
 <h1 id="heading">Welcome to Character Details</h1>
 
 
 <ng-container *ngIf="charactersContent">
 	<div class="container">	
-		<a id="back-to-list" routerLink="/updateContent/{{this.id}}">Update Content</a>
+		<a id="back-to-list" mat-raised-button color="warn" routerLink="/updateContent/{{this.id}}">Update Content</a>
 		<div class="content">
 			<div class="top-section">
 				<h1 class="contentTitle"><span class="contentName">Title </span> <span class="vrline">&#9213;</span> {{charactersContent?.title}}</h1>

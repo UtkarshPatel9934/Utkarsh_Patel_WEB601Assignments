@@ -4,10 +4,12 @@
 
 
 <div class="search-form">
-		
-	<input placeholder="Search Doraemon Caharacter by inputing ID here.." type="number" autofocus #idNumber>
-	<button class="getUserInputBtn" (click)="checkForIdInList(idNumber.value)">Check Content at id</button>
+	<mat-form-field color="primary" appearance="fill">
+		<input matInput placeholder="Search Doraemon Caharacter by inputing ID here.." type="number" autofocus #idNumber>
+	</mat-form-field>
 </div>
+
+<button  mat-raised-button color="warn" class="getUserInputBtn" (click)="checkForIdInList(idNumber.value)">Check Content at id</button>
 
 <br>
 

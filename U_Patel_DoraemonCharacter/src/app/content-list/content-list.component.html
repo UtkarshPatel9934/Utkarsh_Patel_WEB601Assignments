@@ -12,9 +12,11 @@
 	{{disabledMsg}}
 </div>
 
-<div>
-	<input id="inputBox" #getUserInput placeholder="Please Type EXACT Author Name here..." #getInputFromUser id="text" type="text" value="{{displayValue}}" (keyup)="unBlockBtn()"> &nbsp;
-	<button disabled="disabled" class="getUserInputBtn" type="button" (click)="getValue(getUserInput.value); getDisabledMessage(); foundMsg();provideInputValueToPipe(getUserInput.value)">{{displayValue ? displayValue : 'Get Information'}}</button>
+<div class="search_by_Author">
+<mat-form-field color="primary" appearance="fill">
+	<input matInput id="inputBox" #getUserInput placeholder="Please Type EXACT Author Name here..." #getInputFromUser id="text" type="text" value="{{displayValue}}" (keyup)="unBlockBtn()"> &nbsp;
+</mat-form-field>
+<button mat-raised-button color="warn" class="getUserInputBtn" type="button" (click)="getValue(getUserInput.value); getDisabledMessage(); foundMsg();provideInputValueToPipe(getUserInput.value)">{{displayValue ? displayValue : 'Get Information'}}</button>
 </div>
 
 <div>

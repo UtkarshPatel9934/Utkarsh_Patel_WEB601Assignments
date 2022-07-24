@@ -24,6 +24,11 @@ import { ChangeContentComponent } from './change-content/change-content.componen
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatButtonModule } from '@angular/material/button';
+ import { MatInputModule } from '@angular/material/input';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +45,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
+    MatButtonModule,
+    MatInputModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,

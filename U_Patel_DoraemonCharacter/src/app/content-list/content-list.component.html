@@ -26,20 +26,20 @@
 <hr>
 <h1>Filterd Content Type: "Men"</h1>
 <div>
-	<app-content-card  *ngFor="let item of doraemonCharacters | filterPipe:'Men'; let even = even; let odd = odd;" class="menCards" [class.even]="even" [class.odd]="odd" [charactersContent]="item"></app-content-card>
+	<app-content-card  *ngFor="let item of doraemonCharacters | filterPipe:'Men'; let even = even; let odd = odd;" class="menCards" [class.even1]="even" [class.odd1]="odd" [charactersContent]="item"></app-content-card>
 </div>
 
 <hr>
 
 <h1>Filterd Content Type: "Women"</h1>
 <div>
-	<app-content-card  *ngFor="let item of doraemonCharacters | filterPipe:'Women'; let even = even; let odd = odd" class="womenCards" [class.even]="even" [class.odd]="odd" [charactersContent]="item"></app-content-card>
+	<app-content-card  *ngFor="let item of doraemonCharacters | filterPipe:'Women'; let even = even; let odd = odd" class="womenCards" [class.even1]="even" [class.odd1]="odd" [charactersContent]="item"></app-content-card>
 </div>
 
 <hr>
 
 <h1>Filterd Content Type: ""</h1>
 <div>
-	<app-content-card  *ngFor="let item of doraemonCharacters | filterPipe:''; let even = even; let odd = odd" class="noTypeCards" [class.even]="even" [class.odd]="odd" [charactersContent]="item"></app-content-card>
+	<app-content-card  *ngFor="let item of doraemonCharacters | filterPipe:''; let even = even; let odd = odd" class="noTypeCards" [class.even1]="even" [class.odd1]="odd" [charactersContent]="item"></app-content-card>
 </div>
 

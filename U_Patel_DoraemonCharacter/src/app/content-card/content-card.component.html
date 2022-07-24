@@ -1,20 +1,26 @@
-<div class="contentCard">
+<!-- <div class="contentCard"> -->
 
 	<!-- Added a if condition to check if Image will displays or not.... -->
-	<img (click)="printDataOnConsole()" *ngIf="charactersContent?.imageLink; else elseBlockForImage" [src]="charactersContent?.imageLink" class="contentImg" alt="Character Picture">
-	
+	<!-- <img (click)="printDataOnConsole()" *ngIf="charactersContent?.imageLink; else elseBlockForImage" -->
+		<!-- [src]="charactersContent?.imageLink" class="contentImg" alt="Character Picture"> -->
+
 	<!-- If Image is not set this will runs -->
-	<ng-template #elseBlockForImage>
-		<img src="https://lh3.googleusercontent.com/qkXBPA-LCep0oQU_q4NtQ3Wo_VaZ4ARntz-U5c5Qp6VnB6whfRb7qONlj3UNB8mdbwhdqwa1P6MKI4O0MK8cKqWQXsBUpzkrEla1fQ=w1400-k" class="contentImg" alt="Character Picture Not Available">
+	<!-- <ng-template #elseBlockForImage>
+		<img src="https://lh3.googleusercontent.com/qkXBPA-LCep0oQU_q4NtQ3Wo_VaZ4ARntz-U5c5Qp6VnB6whfRb7qONlj3UNB8mdbwhdqwa1P6MKI4O0MK8cKqWQXsBUpzkrEla1fQ=w1400-k"
+			class="contentImg" alt="Character Picture Not Available"> -->
 		<!-- <img src="https://t4.ftcdn.net/jpg/04/00/24/31/360_F_400243185_BOxON3h9avMUX10RsDkt3pJ8iQx72kS3.jpg" class="contentImg" alt="Character Picture Not Available"> -->
-	</ng-template>
+	<!-- </ng-template> -->
 	<!-- If Image is not set this will runs -->
 
 
-	<div class="content">
-		<h1 class="contentTitle" appHighlightImportantData [colour]="'yellow'"><span class="contentName">Title </span> <span class="vrline">&#9213;</span><a [routerLink]="['/detail', charactersContent?.id]" routerLinkActive="active">{{charactersContent?.title}} </a></h1>
+	<!-- <div class="content">
+		<h1 class="contentTitle" appHighlightImportantData [colour]="'yellow'"><span class="contentName">Title
+			</span> <span class="vrline">&#9213;</span><a [routerLink]="['/detail', charactersContent?.id]"
+				routerLinkActive="active">{{charactersContent?.title}} </a></h1> -->
 		<!-- <h2 class="contentAuthor"><span class="contentName">Author </span> <span class="vrline">&#9213;</span> {{charactersContent?.author}}</h2> -->
-		<h3 appHighlightImportantData [applyBorderToOnlyType]="true" class="contentType"><span class="contentName">Type </span> <span class="vrline">&#9213;</span> {{charactersContent?.type}}</h3>
+		<!-- <h3 appHighlightImportantData [applyBorderToOnlyType]="true" class="contentType"><span
+				class="contentName">Type </span> <span class="vrline">&#9213;</span>
+			{{charactersContent?.type}}</h3> -->
 
 
 		<!-- Added a if condition to check if Body Conent will displays or not.... -->
@@ -28,18 +34,70 @@
 
 
 		<!-- Added a if condition to check if Hastags will displays or not.... -->
-		<span *ngIf="charactersContent?.hashtags?.length !== 0 && charactersContent?.hashtags;  else elseBlockForHashtags">
-			<div appHighlightImportantData [applyColorToHashtags]="true" *ngFor="let Hashtags of charactersContent?.hashtags">
+		<!-- <span
+			*ngIf="charactersContent?.hashtags?.length !== 0 && charactersContent?.hashtags;  else elseBlockForHashtags">
+			<div appHighlightImportantData [applyColorToHashtags]="true"
+				*ngFor="let Hashtags of charactersContent?.hashtags">
+				<span id="hastags">&#10522;</span> {{Hashtags}}
+			</div> -->
+			<!-- {{charactersContent?.hashtags?.join(", ")}} -->
+
+		<!-- </span> -->
+
+		<!-- If Image is not set this will runs -->
+		<!-- <ng-template #elseBlockForHashtags>
+			<span><span id="hastags">&#10522;</span>Sorry, Hashtags are not available for this
+				Character!</span>
+		</ng-template> -->
+		<!-- If Image is not set this will runs -->
+	<!-- </div>
+</div> -->
+
+
+<div class="card__container">
+
+<mat-card class="example-card">
+	<mat-card-header>
+		<!-- <div mat-card-avatar class="example-header-image"></div> -->
+		<mat-card-title>
+			<h1 class="contentTitle" appHighlightImportantData [colour]="'yellow'"><span class="contentName">Title
+			</span> <span class="vrline">&#9213;</span><a [routerLink]="['/detail', charactersContent?.id]"
+				routerLinkActive="active"> {{charactersContent?.title}} </a></h1>
+		</mat-card-title>
+		<mat-card-subtitle>
+			<h3 appHighlightImportantData [applyBorderToOnlyType]="true" class="contentType"><span
+				class="contentName">Type </span> <span class="vrline">&#9213;</span>
+			{{charactersContent?.type}}</h3>
+		</mat-card-subtitle>
+	</mat-card-header>
+	<img mat-card-image (click)="printDataOnConsole()" *ngIf="charactersContent?.imageLink; else elseBlockForImage" [src]="charactersContent?.imageLink" alt="Character Picture">
+		<!-- If Image is not set this will runs -->
+	<ng-template #elseBlockForImage>
+		<img src="https://lh3.googleusercontent.com/qkXBPA-LCep0oQU_q4NtQ3Wo_VaZ4ARntz-U5c5Qp6VnB6whfRb7qONlj3UNB8mdbwhdqwa1P6MKI4O0MK8cKqWQXsBUpzkrEla1fQ=w1400-k" alt="Character Picture Not Available">
+		<!-- <img src="https://t4.ftcdn.net/jpg/04/00/24/31/360_F_400243185_BOxON3h9avMUX10RsDkt3pJ8iQx72kS3.jpg" class="contentImg" alt="Character Picture Not Available"> -->
+	</ng-template>
+	<!-- If Image is not set this will runs -->
+	<mat-card-content>
+		<h2 class="hashtags__title">Hashtags:</h2>
+		<span class="hashtags"
+			*ngIf="charactersContent?.hashtags?.length !== 0 && charactersContent?.hashtags;  else elseBlockForHashtags">
+			<div appHighlightImportantData [applyColorToHashtags]="true"
+				*ngFor="let Hashtags of charactersContent?.hashtags" id="hastags">
 				<span id="hastags">&#10522;</span> {{Hashtags}}
 			</div>
-		 <!-- {{charactersContent?.hashtags?.join(", ")}} -->
-		 
+			<!-- {{charactersContent?.hashtags?.join(", ")}} -->
 		</span>
-		
 		<!-- If Image is not set this will runs -->
 		<ng-template #elseBlockForHashtags>
-			<span><span id="hastags">&#10522;</span>Sorry, Hashtags are not available for this Character!</span>
+			<span><span id="hastags">&#10522;</span>Sorry, Hashtags are not available for this
+				Character!</span>
 		</ng-template>
 		<!-- If Image is not set this will runs -->
-	</div>
+	</mat-card-content>
+	<mat-card-actions class="btn_details">
+		<button class="btn__to__details" [routerLink]="['/detail', charactersContent?.id]"
+		routerLinkActive="active" mat-raised-button color="warn">View Character Details</button>
+	</mat-card-actions>
+</mat-card>
+
 </div>

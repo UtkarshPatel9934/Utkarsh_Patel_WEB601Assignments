@@ -1,7 +1,7 @@
 :host{
 	display: block;
 	text-align: center;
-	border: 2px solid red;
+	// border: 2px solid red;
 	margin: 10px auto;
 	width: 60vw;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -11,45 +11,105 @@
 	color: rgb(0, 0, 0);
 
 	/* Odd Even ContentCard Styles */
-	&.even {
-		/* color: grey; */
-		background-color: lightgray;
-	}
+	// &.even {
+	// 	/* color: grey; */
+	// 	background-color: lightgray;
+	// }
 
-	&.odd {
-		background-color: white;
-	}
-	&.singleCard{
-		-webkit-box-shadow: 0 0 30px rgb(0, 0, 0);
-		box-shadow: 0 0 30px rgb(0, 0, 0);;
-	}
+	// &.odd {
+	// 	background-color: white;
+	// }
+	// &.singleCard{
+	// 	-webkit-box-shadow: 0 0 30px rgb(0, 0, 0);
+	// 	box-shadow: 0 0 30px rgb(0, 0, 0);
+	// }
 }
 
-.content{
-	padding: 20px 30px;
-}
+// .content{
+// 	padding: 20px 30px;
+// }
 
-.contentImg{
-	width: 100%;
-	height: 45vh;
-	border-radius: 0 0 0 30px;
-	border: 0.5px solid rgb(0, 0, 0);
-	box-sizing: border-box;
-}
+// .contentImg{
+// 	width: 100%;
+// 	height: 45vh;
+// 	border-radius: 0 0 0 30px;
+// 	border: 0.5px solid rgb(0, 0, 0);
+// 	box-sizing: border-box;
+// }
 
-.contentBody{
-	font-size: 20px;
-}
+// .contentBody{
+// 	font-size: 20px;
+// }
 
+// #hastags{
+// 	font-size: 45px;
+// 	color: black;
+// }
+
+// .contentName{
+// 	color: black;
+// }
+
+// .vrline{
+// 	color: rgb(255, 0, 0);
+// }
+
+
+
+.card__container{
+	margin-bottom: 40px;
+}
+.example-card {
+	width: 70%;
+	margin: 0 auto;
+	background-color: rgb(31, 167, 235);
+	color: whitesmoke;
+	-webkit-box-shadow: 0 0 20px rgb(0, 0, 0);
+	box-shadow: 0 0 20px rgb(0, 0, 0);
+	padding: 20px;
+}
+      
+.example-header-image {
+	background-size: cover;
+}
+mat-card-title{
+	color: black;
+}
+.contentTitle{
+	font-size: 2.4rem;
+	padding: 20px;
+	color: darkblue;
+	font-weight: bold;
+}
+.contentTitle a{
+	color: darkblue;
+}
+.contentType{
+	font-size: 2rem;
+	text-align: start;
+	padding: 20px 0 20px 20px;
+	color: darkblue;
+	font-weight: bold;
+}
+.hashtags__title{
+	font-size: 2rem;
+	text-align: start;
+	padding: 20px 0 20px 20px;
+	color: darkblue;
+	font-weight: bold;
+}
+.hashtags{
+	font-size: 1.7rem;
+	text-align: start;
+	color: darkblue;
+	font-weight: bold;
+}
 #hastags{
-	font-size: 45px;
-	color: black;
+	margin: 5px;
+	padding: 5px 0;
 }
-
-.contentName{
-	color: black;
-}
-
-.vrline{
-	color: rgb(255, 0, 0);
+.btn__to__details{
+	display: block;
+	padding: 10px;
+	font-size: 1.4rem;
 }
